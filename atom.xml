@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Ats</title>
+  <title>Coding Park</title>
   
   <subtitle>Welcome to my blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-09T13:22:40.424Z</updated>
+  <updated>2019-06-09T14:17:16.725Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>87.Scramble String</title>
-    <link href="http://yoursite.com/2019/06/09/String/"/>
-    <id>http://yoursite.com/2019/06/09/String/</id>
+    <title>Scramble String</title>
+    <link href="http://yoursite.com/2019/06/09/87/"/>
+    <id>http://yoursite.com/2019/06/09/87/</id>
     <published>2019-06-09T04:28:36.000Z</published>
-    <updated>2019-06-09T13:22:40.424Z</updated>
+    <updated>2019-06-09T14:17:16.725Z</updated>
     
     <summary type="html">
     
@@ -61,7 +61,7 @@
     <link href="http://yoursite.com/2019/06/06/hello-world/"/>
     <id>http://yoursite.com/2019/06/06/hello-world/</id>
     <published>2019-06-06T09:45:04.064Z</published>
-    <updated>2019-06-06T09:45:04.064Z</updated>
+    <updated>2019-06-09T13:29:29.306Z</updated>
     
     <summary type="html">
     
@@ -74,6 +74,8 @@
       
     
     </summary>
+    
+      <category term="Test And Init" scheme="http://yoursite.com/categories/Test-And-Init/"/>
     
     
   </entry>
