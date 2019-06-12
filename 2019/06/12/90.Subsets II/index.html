@@ -111,17 +111,18 @@
 
 
 
-  <meta name="description" content="Trip Of Learning Code">
+  <meta name="description" content="Description:Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set). Note: The solution set must not contain duplicate subsets. Example: 1234567">
+<meta name="keywords" content="DFS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="New">
-<meta property="og:url" content="http://yoursite.com/2019/06/06/New/index.html">
+<meta property="og:title" content="90.Subsets II">
+<meta property="og:url" content="http://yoursite.com/2019/06/12/90.Subsets II/index.html">
 <meta property="og:site_name" content="Coding Park">
-<meta property="og:description" content="Trip Of Learning Code">
+<meta property="og:description" content="Description:Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set). Note: The solution set must not contain duplicate subsets. Example: 1234567">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-11T07:35:13.452Z">
+<meta property="og:updated_time" content="2019-06-12T13:43:44.249Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="New">
-<meta name="twitter:description" content="Trip Of Learning Code">
+<meta name="twitter:title" content="90.Subsets II">
+<meta name="twitter:description" content="Description:Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set). Note: The solution set must not contain duplicate subsets. Example: 1234567">
 
 
 
@@ -131,7 +132,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/06/New/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/12/90.Subsets II/">
 
 
 
@@ -141,7 +142,7 @@
   };
 </script>
 
-  <title>New | Coding Park</title>
+  <title>90.Subsets II | Coding Park</title>
   
 
 
@@ -379,7 +380,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/06/New/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/12/90.Subsets II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -396,7 +397,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">New
+          <h1 class="post-title" itemprop="name headline">90.Subsets II
 
               
             
@@ -422,28 +423,34 @@
                 
               
 
-              <time title="创建于：2019-06-06 17:48:42" itemprop="dateCreated datePublished" datetime="2019-06-06T17:48:42+08:00">2019-06-06</time>
+              <time title="创建于：2019-06-12 21:06:28 / 更新于：21:43:44" itemprop="dateCreated datePublished" datetime="2019-06-12T21:06:28+08:00">2019-06-12</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="更新于：2019-06-11 15:35:13" itemprop="dateModified" datetime="2019-06-11T15:35:13+08:00">2019-06-11</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -480,7 +487,14 @@
       
 
       
-        
+        <h5 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h5><p>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).</p>
+<p>Note: The solution set must not contain duplicate subsets.</p>
+<p>Example:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,2,2]</span><br><span class="line">Output:</span><br><span class="line">[</span><br><span class="line">  [2],</span><br><span class="line">  [1],</span><br><span class="line">  [1,2,2],</span><br><span class="line">  [2,2],</span><br><span class="line">  [1,2],</span><br><span class="line">  []</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h5 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//很容易想到DFS的方法，将挑选子集看成是形成一棵以NULL为根的树，从树的根节点到树中任意节点的路径都可以看成是nums的一个非空子集，</span></span><br><span class="line"><span class="comment">//树的第一层是NULL，第二层显然就是nums中的一个个元素。因为需要去重，所以把数组排序，这样可以从头开始挑选数组中的点作为树的节点，</span></span><br><span class="line"><span class="comment">//当把某个点作为节点之后，假设这个节点为q,q的父节点为p,显然p的子代不能再有第二个值为q的节点了</span></span><br><span class="line"><span class="comment">//因为排序之后，继续挑选节点形成新的集合，都是从数组中值为q之后的点挑选的，如果出现第二个值为q的节点，同样只能从值为q之后的点挑选，必然会重复</span></span><br><span class="line"><span class="comment">//但是q的子节点中显然可以有值为q的点</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt;res = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getList</span><span class="params">(<span class="keyword">int</span> []nums,LinkedList&lt;Integer&gt;ans,<span class="keyword">int</span> index)</span></span>&#123;<span class="comment">//ans代表序号index之前的数组组成的子集，然后在index之后再挑一个元素就可以组成一个新的子集</span></span><br><span class="line">        res.add(<span class="keyword">new</span> LinkedList&lt;Integer&gt;(ans));</span><br><span class="line">        <span class="keyword">if</span>(index == nums.length) <span class="keyword">return</span>;<span class="comment">//index则代表接下来的元素从哪个序号开始挑，挑到length显然意味这整个数组已经挑完了</span></span><br><span class="line">        <span class="keyword">int</span> q = nums[index] - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = index;i &lt; nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(q == nums[i]) <span class="keyword">continue</span>;<span class="comment">//当在这一轮挑到重复的元素q时显然应该舍去</span></span><br><span class="line">            <span class="keyword">else</span> q = nums[i];</span><br><span class="line">            ans.addLast(nums[i]);</span><br><span class="line">            getList(nums,ans,i + <span class="number">1</span>);</span><br><span class="line">            ans.pollLast();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; subsetsWithDup(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        getList(nums,<span class="keyword">new</span> LinkedList&lt;Integer&gt;(),<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
@@ -492,6 +506,35 @@
     <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/06/12/90.Subsets II/">90.Subsets II</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Atss 的个人博客">Atss</a></p>
+  <p><span>发布时间:</span>2019年06月12日 - 21:06</p>
+  <p><span>最后更新:</span>2019年06月12日 - 21:06</p>
+  <p><span>原始链接:</span><a href="/2019/06/12/90.Subsets II/" title="90.Subsets II">http://yoursite.com/2019/06/12/90.Subsets II/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/06/12/90.Subsets II/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
       
     </div>
     
@@ -546,6 +589,15 @@
       </div>
 
     <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/DFS/" rel="tag"># DFS</a>
+          
+        </div>
       
 
       
@@ -611,8 +663,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/06/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/06/11/87-Scramble-String/" rel="next" title="87.Scramble String">
+                <i class="fa fa-chevron-left"></i> 87.Scramble String
               </a>
             
           </div>
@@ -621,8 +673,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/11/87-Scramble-String/" rel="prev" title="87.Scramble String">
-                87.Scramble String <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/12/91-Decode-Ways/" rel="prev" title="91.Decode Ways">
+                91.Decode Ways <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -667,8 +719,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -787,6 +848,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution:</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

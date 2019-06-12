@@ -111,17 +111,18 @@
 
 
 
-  <meta name="description" content="Trip Of Learning Code">
+  <meta name="description" content="Description:A message containing letters from A-Z is being encoded to numbers using the following mapping: 1234&apos;A&apos; -&amp;gt; 1&apos;B&apos; -&amp;gt; 2...&apos;Z&apos; -&amp;gt; 26  Given a non-empty string containing only digits, d">
+<meta name="keywords" content="DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="New">
-<meta property="og:url" content="http://yoursite.com/2019/06/06/New/index.html">
+<meta property="og:title" content="91.Decode Ways">
+<meta property="og:url" content="http://yoursite.com/2019/06/12/91-Decode-Ways/index.html">
 <meta property="og:site_name" content="Coding Park">
-<meta property="og:description" content="Trip Of Learning Code">
+<meta property="og:description" content="Description:A message containing letters from A-Z is being encoded to numbers using the following mapping: 1234&apos;A&apos; -&amp;gt; 1&apos;B&apos; -&amp;gt; 2...&apos;Z&apos; -&amp;gt; 26  Given a non-empty string containing only digits, d">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-11T07:35:13.452Z">
+<meta property="og:updated_time" content="2019-06-12T13:45:51.427Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="New">
-<meta name="twitter:description" content="Trip Of Learning Code">
+<meta name="twitter:title" content="91.Decode Ways">
+<meta name="twitter:description" content="Description:A message containing letters from A-Z is being encoded to numbers using the following mapping: 1234&apos;A&apos; -&amp;gt; 1&apos;B&apos; -&amp;gt; 2...&apos;Z&apos; -&amp;gt; 26  Given a non-empty string containing only digits, d">
 
 
 
@@ -131,7 +132,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/06/New/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/12/91-Decode-Ways/">
 
 
 
@@ -141,7 +142,7 @@
   };
 </script>
 
-  <title>New | Coding Park</title>
+  <title>91.Decode Ways | Coding Park</title>
   
 
 
@@ -379,7 +380,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/06/New/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/12/91-Decode-Ways/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -396,7 +397,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">New
+          <h1 class="post-title" itemprop="name headline">91.Decode Ways
 
               
             
@@ -422,28 +423,34 @@
                 
               
 
-              <time title="创建于：2019-06-06 17:48:42" itemprop="dateCreated datePublished" datetime="2019-06-06T17:48:42+08:00">2019-06-06</time>
+              <time title="创建于：2019-06-12 21:43:35 / 更新于：21:45:51" itemprop="dateCreated datePublished" datetime="2019-06-12T21:43:35+08:00">2019-06-12</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="更新于：2019-06-11 15:35:13" itemprop="dateModified" datetime="2019-06-11T15:35:13+08:00">2019-06-11</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -480,7 +487,16 @@
       
 
       
-        
+        <h5 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h5><p>A message containing letters from <code>A-Z</code> is being encoded to numbers using the following mapping:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">'A' -&gt; 1</span><br><span class="line">'B' -&gt; 2</span><br><span class="line">...</span><br><span class="line">'Z' -&gt; 26</span><br></pre></td></tr></table></figure>
+
+<p>Given a <strong>non-empty</strong> string containing only digits, determine the total number of ways to decode it.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: "12"</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: It could be decoded as "AB" (1 2) or "L" (12).</span><br></pre></td></tr></table></figure>
+
+<h5 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Simple DP,just pay attention to the situation where s.charAt(i) == '0'</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDecodings</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> []dp = <span class="keyword">new</span> <span class="keyword">int</span>[s.length() + <span class="number">5</span>];</span><br><span class="line">        <span class="keyword">if</span>(s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(s.charAt(<span class="number">0</span>) == <span class="string">'0'</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> num = s.charAt(i) - <span class="string">'0'</span>;</span><br><span class="line">            <span class="keyword">if</span>(num == <span class="number">0</span>)&#123;</span><br><span class="line">               <span class="keyword">if</span>(s.charAt(i - <span class="number">1</span>) -<span class="string">'0'</span> == <span class="number">1</span> || s.charAt(i - <span class="number">1</span>) - <span class="string">'0'</span> == <span class="number">2</span>)&#123;</span><br><span class="line">                   dp[i + <span class="number">1</span>] = dp[i - <span class="number">1</span>];</span><br><span class="line">                   <span class="keyword">continue</span>;</span><br><span class="line">               &#125;  </span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            num += (s.charAt(i - <span class="number">1</span>) - <span class="string">'0'</span> ) * <span class="number">10</span>;</span><br><span class="line">         </span><br><span class="line">            <span class="keyword">if</span>(num &lt; <span class="number">10</span>)&#123;</span><br><span class="line">                dp[i + <span class="number">1</span>] = dp[i];</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(num &lt;= <span class="number">26</span>) dp[i + <span class="number">1</span>] = dp[i] + dp[i - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">else</span> dp[i + <span class="number">1</span>] = dp[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[s.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
@@ -492,6 +508,35 @@
     <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/06/12/91-Decode-Ways/">91.Decode Ways</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Atss 的个人博客">Atss</a></p>
+  <p><span>发布时间:</span>2019年06月12日 - 21:06</p>
+  <p><span>最后更新:</span>2019年06月12日 - 21:06</p>
+  <p><span>原始链接:</span><a href="/2019/06/12/91-Decode-Ways/" title="91.Decode Ways">http://yoursite.com/2019/06/12/91-Decode-Ways/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/06/12/91-Decode-Ways/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
       
     </div>
     
@@ -546,6 +591,15 @@
       </div>
 
     <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/DP/" rel="tag"># DP</a>
+          
+        </div>
       
 
       
@@ -611,8 +665,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/06/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/06/12/90.Subsets II/" rel="next" title="90.Subsets II">
+                <i class="fa fa-chevron-left"></i> 90.Subsets II
               </a>
             
           </div>
@@ -621,8 +675,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/11/87-Scramble-String/" rel="prev" title="87.Scramble String">
-                87.Scramble String <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/12/92-Reverse-Linked-List-II/" rel="prev" title="92.Reverse Linked List II">
+                92.Reverse Linked List II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -667,8 +721,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -787,6 +850,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution:</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
