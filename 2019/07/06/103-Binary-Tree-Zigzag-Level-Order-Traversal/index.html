@@ -111,18 +111,17 @@
 
 
 
-  <meta name="description" content="Description：Given a string containing only digits, restore it by returning all possible valid IP address combinations. Example:12Input: &quot;25525511135&quot;Output: [&quot;255.255.11.135&quot;, &quot;255.255.111.35&quot;]  Solut">
-<meta name="keywords" content="recursive">
+  <meta name="description" content="Description:Given a binary tree, return the zigzag level order traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between). For example:Given">
 <meta property="og:type" content="article">
-<meta property="og:title" content="93.Restore IP Addresses">
-<meta property="og:url" content="http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/index.html">
+<meta property="og:title" content="103. Binary Tree Zigzag Level Order Traversal">
+<meta property="og:url" content="http://yoursite.com/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/index.html">
 <meta property="og:site_name" content="Coding Park">
-<meta property="og:description" content="Description：Given a string containing only digits, restore it by returning all possible valid IP address combinations. Example:12Input: &quot;25525511135&quot;Output: [&quot;255.255.11.135&quot;, &quot;255.255.111.35&quot;]  Solut">
+<meta property="og:description" content="Description:Given a binary tree, return the zigzag level order traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between). For example:Given">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-25T10:15:54.660Z">
+<meta property="og:updated_time" content="2019-07-06T13:49:55.649Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="93.Restore IP Addresses">
-<meta name="twitter:description" content="Description：Given a string containing only digits, restore it by returning all possible valid IP address combinations. Example:12Input: &quot;25525511135&quot;Output: [&quot;255.255.11.135&quot;, &quot;255.255.111.35&quot;]  Solut">
+<meta name="twitter:title" content="103. Binary Tree Zigzag Level Order Traversal">
+<meta name="twitter:description" content="Description:Given a binary tree, return the zigzag level order traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between). For example:Given">
 
 
 
@@ -132,7 +131,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/">
 
 
 
@@ -142,7 +141,7 @@
   };
 </script>
 
-  <title>93.Restore IP Addresses | Coding Park</title>
+  <title>103. Binary Tree Zigzag Level Order Traversal | Coding Park</title>
   
 
 
@@ -380,7 +379,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -397,7 +396,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">93.Restore IP Addresses
+          <h1 class="post-title" itemprop="name headline">103. Binary Tree Zigzag Level Order Traversal
 
               
             
@@ -423,7 +422,7 @@
                 
               
 
-              <time title="创建于：2019-06-25 18:01:02 / 更新于：18:15:54" itemprop="dateCreated datePublished" datetime="2019-06-25T18:01:02+08:00">2019-06-25</time>
+              <time title="创建于：2019-07-06 21:47:38 / 更新于：21:49:55" itemprop="dateCreated datePublished" datetime="2019-07-06T21:47:38+08:00">2019-07-06</time>
             
 
             
@@ -487,11 +486,15 @@
       
 
       
-        <h2 id="Description："><a href="#Description：" class="headerlink" title="Description："></a>Description：</h2><p>Given a string containing only digits, restore it by returning all possible valid IP address combinations.</p>
-<h4 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: "25525511135"</span><br><span class="line">Output: ["255.255.11.135", "255.255.111.35"]</span><br></pre></td></tr></table></figure>
+        <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a binary tree, return the <em>zigzag level order</em> traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between).</p>
+<p>For example:<br>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  3</span><br><span class="line"> / \</span><br><span class="line">9  20</span><br><span class="line">  /  \</span><br><span class="line"> 15   7</span><br></pre></td></tr></table></figure>
 
-<h4 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h4><p>simple dfs，remember using array to save  string in procedure and it can save  lots of time</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt;ans = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getLists</span><span class="params">(String s,<span class="keyword">int</span> cnt,<span class="keyword">char</span> []len,<span class="keyword">int</span> pos)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.length() == <span class="number">0</span> &amp;&amp; cnt == <span class="number">5</span>)&#123;</span><br><span class="line">            ans.add(<span class="keyword">new</span> String(String.valueOf(len)));</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(cnt &gt;= <span class="number">5</span> ||s.length() == <span class="number">0</span>) <span class="keyword">return</span> ;</span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; s.length();i++)&#123;</span><br><span class="line">            num *= <span class="number">10</span>;</span><br><span class="line">            num += s.charAt(i) - <span class="string">'0'</span> + <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(num &gt; <span class="number">255</span>) <span class="keyword">return</span>;</span><br><span class="line">            <span class="keyword">int</span> posi = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span>(posi &lt;= i)&#123;</span><br><span class="line">                len[pos + posi] = s.charAt(posi);</span><br><span class="line">                posi++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(cnt != <span class="number">4</span>) &#123;</span><br><span class="line">                len[pos + posi] = <span class="string">'.'</span>;</span><br><span class="line">                posi++;</span><br><span class="line">            &#125;</span><br><span class="line">            getLists(s.substring(i + <span class="number">1</span>),cnt + <span class="number">1</span>,len,pos + posi);</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(<span class="number">0</span>) == <span class="string">'0'</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">restoreIpAddresses</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.length() &lt; <span class="number">4</span>|| s.length() &gt; <span class="number">12</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        <span class="keyword">char</span> []len = <span class="keyword">new</span> <span class="keyword">char</span>[s.length() + <span class="number">3</span>];</span><br><span class="line">        getLists(s,<span class="number">1</span>,len,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>return its zigzag level order traversal as:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [3],</span><br><span class="line">  [20,9],</span><br><span class="line">  [15,7]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>just read the code</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt;ans = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        Stack&lt;TreeNode&gt;sta1 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        Stack&lt;TreeNode&gt;sta2 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> mk = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        sta1.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!sta1.isEmpty() || !sta2.isEmpty())&#123;</span><br><span class="line">            List&lt;Integer&gt;res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            <span class="keyword">if</span>(mk == <span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">while</span>(!sta1.isEmpty())&#123;</span><br><span class="line">                    TreeNode st = sta1.pop();</span><br><span class="line">                    res.add(st.val);</span><br><span class="line">                    <span class="keyword">if</span>(st.left != <span class="keyword">null</span>) sta2.push(st.left);</span><br><span class="line">                    <span class="keyword">if</span>(st.right != <span class="keyword">null</span>) sta2.push(st.right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">while</span>(!sta2.isEmpty())&#123;</span><br><span class="line">                    TreeNode st = sta2.pop();</span><br><span class="line">                    res.add(st.val);</span><br><span class="line">                    <span class="keyword">if</span>(st.right != <span class="keyword">null</span>) sta1.push(st.right);</span><br><span class="line">                    <span class="keyword">if</span>(st.left != <span class="keyword">null</span>) sta1.push(st.left);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            mk ^= <span class="number">1</span>;</span><br><span class="line">            ans.add(<span class="keyword">new</span> ArrayList(res));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -511,12 +514,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/06/25/93-Restore-IP-Addresses/">93.Restore IP Addresses</a></p>
+  <p><span>本文标题:</span><a href="/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/">103. Binary Tree Zigzag Level Order Traversal</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Atss 的个人博客">Atss</a></p>
-  <p><span>发布时间:</span>2019年06月25日 - 18:06</p>
-  <p><span>最后更新:</span>2019年06月25日 - 18:06</p>
-  <p><span>原始链接:</span><a href="/2019/06/25/93-Restore-IP-Addresses/" title="93.Restore IP Addresses">http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年07月06日 - 21:07</p>
+  <p><span>最后更新:</span>2019年07月06日 - 21:07</p>
+  <p><span>原始链接:</span><a href="/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/" title="103. Binary Tree Zigzag Level Order Traversal">http://yoursite.com/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -589,15 +592,6 @@
 
     <footer class="post-footer">
       
-        
-          
-        
-        <div class="post-tags">
-          
-            <a href="/tags/recursive/" rel="tag"># recursive</a>
-          
-        </div>
-      
 
       
       
@@ -662,8 +656,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/12/92-Reverse-Linked-List-II/" rel="next" title="92.Reverse Linked List II">
-                <i class="fa fa-chevron-left"></i> 92.Reverse Linked List II
+              <a href="/2019/07/05/99-Recover-Binary-Search-Tree/" rel="next" title="99. Recover Binary Search Tree">
+                <i class="fa fa-chevron-left"></i> 99. Recover Binary Search Tree
               </a>
             
           </div>
@@ -672,8 +666,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/01/95-Unique-Binary-Search-Trees-II/" rel="prev" title="95. Unique Binary Search Trees II">
-                95. Unique Binary Search Trees II <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/06/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal/" rel="prev" title="106. Construct Binary Tree from Inorder and Postorder Traversal">
+                106. Construct Binary Tree from Inorder and Postorder Traversal <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -862,7 +856,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description："><span class="nav-number">1.</span> <span class="nav-text">Description：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Example"><span class="nav-number">1.0.1.</span> <span class="nav-text">Example:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution："><span class="nav-number">1.0.2.</span> <span class="nav-text">Solution：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution:</span></a></li></ol></div>
             
 
           </div>

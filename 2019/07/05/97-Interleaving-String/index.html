@@ -111,18 +111,18 @@
 
 
 
-  <meta name="description" content="Description：Given a string containing only digits, restore it by returning all possible valid IP address combinations. Example:12Input: &quot;25525511135&quot;Output: [&quot;255.255.11.135&quot;, &quot;255.255.111.35&quot;]  Solut">
-<meta name="keywords" content="recursive">
+  <meta name="description" content="Description:Given s1, s2, s3, find whether s3 is formed by the interleaving of s1 and s2. Example 1: 12Input: s1 = &quot;aabcc&quot;, s2 = &quot;dbbca&quot;, s3 = &quot;aadbbcbcac&quot;Output: true  Solution1:It’s easy to consider">
+<meta name="keywords" content="memorized search">
 <meta property="og:type" content="article">
-<meta property="og:title" content="93.Restore IP Addresses">
-<meta property="og:url" content="http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/index.html">
+<meta property="og:title" content="97. Interleaving String">
+<meta property="og:url" content="http://yoursite.com/2019/07/05/97-Interleaving-String/index.html">
 <meta property="og:site_name" content="Coding Park">
-<meta property="og:description" content="Description：Given a string containing only digits, restore it by returning all possible valid IP address combinations. Example:12Input: &quot;25525511135&quot;Output: [&quot;255.255.11.135&quot;, &quot;255.255.111.35&quot;]  Solut">
+<meta property="og:description" content="Description:Given s1, s2, s3, find whether s3 is formed by the interleaving of s1 and s2. Example 1: 12Input: s1 = &quot;aabcc&quot;, s2 = &quot;dbbca&quot;, s3 = &quot;aadbbcbcac&quot;Output: true  Solution1:It’s easy to consider">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-25T10:15:54.660Z">
+<meta property="og:updated_time" content="2019-07-05T06:02:07.741Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="93.Restore IP Addresses">
-<meta name="twitter:description" content="Description：Given a string containing only digits, restore it by returning all possible valid IP address combinations. Example:12Input: &quot;25525511135&quot;Output: [&quot;255.255.11.135&quot;, &quot;255.255.111.35&quot;]  Solut">
+<meta name="twitter:title" content="97. Interleaving String">
+<meta name="twitter:description" content="Description:Given s1, s2, s3, find whether s3 is formed by the interleaving of s1 and s2. Example 1: 12Input: s1 = &quot;aabcc&quot;, s2 = &quot;dbbca&quot;, s3 = &quot;aadbbcbcac&quot;Output: true  Solution1:It’s easy to consider">
 
 
 
@@ -132,7 +132,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/05/97-Interleaving-String/">
 
 
 
@@ -142,7 +142,7 @@
   };
 </script>
 
-  <title>93.Restore IP Addresses | Coding Park</title>
+  <title>97. Interleaving String | Coding Park</title>
   
 
 
@@ -380,7 +380,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/05/97-Interleaving-String/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -397,7 +397,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">93.Restore IP Addresses
+          <h1 class="post-title" itemprop="name headline">97. Interleaving String
 
               
             
@@ -423,7 +423,7 @@
                 
               
 
-              <time title="创建于：2019-06-25 18:01:02 / 更新于：18:15:54" itemprop="dateCreated datePublished" datetime="2019-06-25T18:01:02+08:00">2019-06-25</time>
+              <time title="创建于：2019-07-05 11:59:56 / 更新于：14:02:07" itemprop="dateCreated datePublished" datetime="2019-07-05T11:59:56+08:00">2019-07-05</time>
             
 
             
@@ -487,11 +487,19 @@
       
 
       
-        <h2 id="Description："><a href="#Description：" class="headerlink" title="Description："></a>Description：</h2><p>Given a string containing only digits, restore it by returning all possible valid IP address combinations.</p>
-<h4 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: "25525511135"</span><br><span class="line">Output: ["255.255.11.135", "255.255.111.35"]</span><br></pre></td></tr></table></figure>
+        <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given <em>s1</em>, <em>s2</em>, <em>s3</em>, find whether <em>s3</em> is formed by the interleaving of <em>s1</em> and <em>s2</em>.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
 
-<h4 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h4><p>simple dfs，remember using array to save  string in procedure and it can save  lots of time</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt;ans = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getLists</span><span class="params">(String s,<span class="keyword">int</span> cnt,<span class="keyword">char</span> []len,<span class="keyword">int</span> pos)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.length() == <span class="number">0</span> &amp;&amp; cnt == <span class="number">5</span>)&#123;</span><br><span class="line">            ans.add(<span class="keyword">new</span> String(String.valueOf(len)));</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(cnt &gt;= <span class="number">5</span> ||s.length() == <span class="number">0</span>) <span class="keyword">return</span> ;</span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; s.length();i++)&#123;</span><br><span class="line">            num *= <span class="number">10</span>;</span><br><span class="line">            num += s.charAt(i) - <span class="string">'0'</span> + <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(num &gt; <span class="number">255</span>) <span class="keyword">return</span>;</span><br><span class="line">            <span class="keyword">int</span> posi = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span>(posi &lt;= i)&#123;</span><br><span class="line">                len[pos + posi] = s.charAt(posi);</span><br><span class="line">                posi++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(cnt != <span class="number">4</span>) &#123;</span><br><span class="line">                len[pos + posi] = <span class="string">'.'</span>;</span><br><span class="line">                posi++;</span><br><span class="line">            &#125;</span><br><span class="line">            getLists(s.substring(i + <span class="number">1</span>),cnt + <span class="number">1</span>,len,pos + posi);</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(<span class="number">0</span>) == <span class="string">'0'</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">restoreIpAddresses</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.length() &lt; <span class="number">4</span>|| s.length() &gt; <span class="number">12</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        <span class="keyword">char</span> []len = <span class="keyword">new</span> <span class="keyword">char</span>[s.length() + <span class="number">3</span>];</span><br><span class="line">        getLists(s,<span class="number">1</span>,len,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution1"><a href="#Solution1" class="headerlink" title="Solution1:"></a>Solution1:</h2><p>It’s easy to consider using dp to solve this problem.We can assume dp[i][j]    as the result of s1[0–i-1],s2[0–j-1],s3[0–i + j - 1],and s1[i-1] or s2[j-1] must be the end of s3[0–i + j - 1] if dp[i][j] is true.Read the code for more details.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isInterleave</span><span class="params">(String s1, String s2, String s3)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() + s2.length() != s3.length()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(s3.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() == <span class="number">0</span>) <span class="keyword">return</span> s2.equals(s3);</span><br><span class="line">        <span class="keyword">if</span>(s2.length() == <span class="number">0</span>) <span class="keyword">return</span> s1.equals(s3);</span><br><span class="line">        <span class="keyword">boolean</span> [][]dp = <span class="keyword">new</span> <span class="keyword">boolean</span>[s1.length() + <span class="number">2</span>][s2.length() + <span class="number">2</span>];</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">1</span>] = s2.charAt(<span class="number">0</span>) == s3.charAt(<span class="number">0</span>) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">        dp[<span class="number">1</span>][<span class="number">0</span>] = s1.charAt(<span class="number">0</span>) == s3.charAt(<span class="number">0</span>) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;= s1.length();i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt;= s2.length();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i == <span class="number">0</span> &amp;&amp;j == <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">if</span>(i == <span class="number">0</span>)&#123;</span><br><span class="line">                    dp[i][j] = (dp[i][j - <span class="number">1</span>] &amp;&amp; (s2.charAt(j - <span class="number">1</span>) == s3.charAt(j - <span class="number">1</span>))) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(j == <span class="number">0</span>)&#123;</span><br><span class="line">                    dp[i][j] = (dp[i - <span class="number">1</span>][j] &amp;&amp; (s1.charAt(i - <span class="number">1</span>) == s3.charAt(i - <span class="number">1</span>))) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(dp[i - <span class="number">1</span>][j] &amp;&amp; s3.charAt(i + j - <span class="number">1</span>) == s1.charAt(i - <span class="number">1</span>)) dp[i][j] = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(dp[i][j - <span class="number">1</span>] &amp;&amp; s3.charAt(i + j - <span class="number">1</span>) == s2.charAt(j - <span class="number">1</span>)) dp[i][j] = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">else</span> dp[i][j] = <span class="keyword">false</span>;</span><br><span class="line">                <span class="comment">//System.out.println(i + " " + j + " " + dp[i][j]);</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[s1.length()][s2.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>And we can try using  1D Dynamic Programming,because we use dp[i][j-1] and dp[i-1][j] to update dp[i][j]  ,it can be saved in 1D</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isInterleave</span><span class="params">(String s1, String s2, String s3)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() + s2.length() != s3.length()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(s3.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() == <span class="number">0</span>) <span class="keyword">return</span> s2.equals(s3);</span><br><span class="line">        <span class="keyword">if</span>(s2.length() == <span class="number">0</span>) <span class="keyword">return</span> s1.equals(s3);</span><br><span class="line">        <span class="keyword">boolean</span> []dp = <span class="keyword">new</span> <span class="keyword">boolean</span>[s2.length() + <span class="number">2</span>];</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">char</span> []ss1 = s1.toCharArray();</span><br><span class="line">        <span class="keyword">char</span> []ss2 = s2.toCharArray();</span><br><span class="line">        <span class="keyword">char</span> []ss3 = s3.toCharArray();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;= s1.length();i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt;= s2.length();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i == <span class="number">0</span> &amp;&amp;j == <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">if</span>(i == <span class="number">0</span>)&#123;</span><br><span class="line">                    dp[j] = dp[j - <span class="number">1</span>] &amp;&amp; ss2[j - <span class="number">1</span>] == ss3[j - <span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(j == <span class="number">0</span>)&#123;</span><br><span class="line">                    dp[j] = dp[j] &amp;&amp; ss1[i - <span class="number">1</span>] == ss3[i - <span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(dp[j] &amp;&amp; ss3[i + j - <span class="number">1</span>] == ss1[i - <span class="number">1</span>]) dp[j] = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(dp[j - <span class="number">1</span>] &amp;&amp; ss3[i + j - <span class="number">1</span>] == ss2[j - <span class="number">1</span>]) dp[j] = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">else</span> dp[j] = <span class="keyword">false</span>;</span><br><span class="line">                <span class="comment">//System.out.println(i + " " + j + " " + dp[i][j]);</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[s2.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Slution2"><a href="#Slution2" class="headerlink" title="Slution2:"></a>Slution2:</h2><p>Memorized search is faster than dp,maybe because I used too much if…else in dp….</p>
+<p>Theory is basically the same as dp,just get the flag[][] in reversed order</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isInterleave</span><span class="params">(String s1, String s2, String s3)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() + s2.length() != s3.length()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(s3.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() == <span class="number">0</span>) <span class="keyword">return</span> s2.equals(s3);</span><br><span class="line">        <span class="keyword">if</span>(s2.length() == <span class="number">0</span>) <span class="keyword">return</span> s1.equals(s3);</span><br><span class="line">        Boolean [][]flag = <span class="keyword">new</span> Boolean[s1.length() + <span class="number">3</span>][s2.length() + <span class="number">3</span>];</span><br><span class="line">        <span class="keyword">return</span> sol(s1.toCharArray(),s2.toCharArray(),s3.toCharArray(),<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,flag);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">sol</span><span class="params">(<span class="keyword">char</span> []s1,<span class="keyword">char</span> []s2,<span class="keyword">char</span> []s3,<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c,Boolean flag[][])</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(c == s3.length) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(flag[a][b] != <span class="keyword">null</span>) <span class="keyword">return</span> flag[a][b];</span><br><span class="line">        <span class="keyword">if</span>(a &lt; s1.length &amp;&amp; s1[a] == s3[c] &amp;&amp; sol(s1,s2,s3,a + <span class="number">1</span>,b,c + <span class="number">1</span>,flag))  flag[a][b] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(b &lt; s2.length &amp;&amp; s2[b] == s3[c] &amp;&amp; sol(s1,s2,s3,a,b + <span class="number">1</span>,c + <span class="number">1</span>,flag)) flag[a][b] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">else</span> flag[a][b] = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> flag[a][b];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -511,12 +519,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/06/25/93-Restore-IP-Addresses/">93.Restore IP Addresses</a></p>
+  <p><span>本文标题:</span><a href="/2019/07/05/97-Interleaving-String/">97. Interleaving String</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Atss 的个人博客">Atss</a></p>
-  <p><span>发布时间:</span>2019年06月25日 - 18:06</p>
-  <p><span>最后更新:</span>2019年06月25日 - 18:06</p>
-  <p><span>原始链接:</span><a href="/2019/06/25/93-Restore-IP-Addresses/" title="93.Restore IP Addresses">http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年07月05日 - 11:07</p>
+  <p><span>最后更新:</span>2019年07月05日 - 14:07</p>
+  <p><span>原始链接:</span><a href="/2019/07/05/97-Interleaving-String/" title="97. Interleaving String">http://yoursite.com/2019/07/05/97-Interleaving-String/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/07/05/97-Interleaving-String/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -594,7 +602,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/recursive/" rel="tag"># recursive</a>
+            <a href="/tags/memorized-search/" rel="tag"># memorized search</a>
           
         </div>
       
@@ -662,8 +670,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/12/92-Reverse-Linked-List-II/" rel="next" title="92.Reverse Linked List II">
-                <i class="fa fa-chevron-left"></i> 92.Reverse Linked List II
+              <a href="/2019/07/01/95-Unique-Binary-Search-Trees-II/" rel="next" title="95. Unique Binary Search Trees II">
+                <i class="fa fa-chevron-left"></i> 95. Unique Binary Search Trees II
               </a>
             
           </div>
@@ -672,8 +680,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/01/95-Unique-Binary-Search-Trees-II/" rel="prev" title="95. Unique Binary Search Trees II">
-                95. Unique Binary Search Trees II <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/05/99-Recover-Binary-Search-Tree/" rel="prev" title="99. Recover Binary Search Tree">
+                99. Recover Binary Search Tree <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -862,7 +870,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description："><span class="nav-number">1.</span> <span class="nav-text">Description：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Example"><span class="nav-number">1.0.1.</span> <span class="nav-text">Example:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution："><span class="nav-number">1.0.2.</span> <span class="nav-text">Solution：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution1"><span class="nav-number">2.</span> <span class="nav-text">Solution1:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Slution2"><span class="nav-number">3.</span> <span class="nav-text">Slution2:</span></a></li></ol></div>
             
 
           </div>

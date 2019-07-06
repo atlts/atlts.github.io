@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/07/06/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal/</loc>
+    
+    <lastmod>2019-07-06T13:53:11.984Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/</loc>
+    
+    <lastmod>2019-07-06T13:49:55.649Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/05/99-Recover-Binary-Search-Tree/</loc>
+    
+    <lastmod>2019-07-06T03:44:16.464Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/05/97-Interleaving-String/</loc>
+    
+    <lastmod>2019-07-05T06:02:07.741Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/07/01/95-Unique-Binary-Search-Trees-II/</loc>
     
     <lastmod>2019-07-01T14:16:23.668Z</lastmod>

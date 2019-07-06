@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2019/07/06/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal/</loc>
+    <lastmod>2019-07-06</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/</loc>
+    <lastmod>2019-07-06</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/07/05/99-Recover-Binary-Search-Tree/</loc>
+    <lastmod>2019-07-06</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/07/05/97-Interleaving-String/</loc>
+    <lastmod>2019-07-05</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2019/07/01/95-Unique-Binary-Search-Trees-II/</loc>
     <lastmod>2019-07-01</lastmod>
   </url>  <url>
