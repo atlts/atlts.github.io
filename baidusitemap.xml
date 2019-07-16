@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2019/07/16/120-Triangle/</loc>
+    <lastmod>2019-07-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/</loc>
+    <lastmod>2019-07-13</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/07/13/116-Populating-Next-Right-Pointers-in-Each-Node/</loc>
+    <lastmod>2019-07-13</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/07/13/117-Populating-Next-Right-Pointers-in-Each-Node-II/</loc>
+    <lastmod>2019-07-13</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/07/12/115-Distinct-Subsequences/</loc>
+    <lastmod>2019-07-12</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/07/08/114-Flatten-Binary-Tree-to-Linked-List/</loc>
+    <lastmod>2019-07-08</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/07/08/113-Path-Sum-II/</loc>
+    <lastmod>2019-07-08</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/07/08/109-Convert-Sorted-List-to-Binary-Search-Tree/</loc>
+    <lastmod>2019-07-08</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2019/07/06/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal/</loc>
     <lastmod>2019-07-06</lastmod>
   </url>  <url>
@@ -15,9 +39,6 @@
   </url>  <url>
     <loc>http://yoursite.com/2019/07/01/95-Unique-Binary-Search-Trees-II/</loc>
     <lastmod>2019-07-01</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/06/25/93-Restore-IP-Addresses/</loc>
-    <lastmod>2019-06-25</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/06/12/92-Reverse-Linked-List-II/</loc>
     <lastmod>2019-06-12</lastmod>
