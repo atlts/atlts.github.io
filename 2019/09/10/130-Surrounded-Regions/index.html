@@ -111,18 +111,18 @@
 
 
 
-  <meta name="description" content="Description:Two elements of a binary search tree (BST) are swapped by mistake. Recover the tree without changing its structure. Example 1: 123456789101112131415Input: [1,3,null,null,2]   1  / 3  \   2">
-<meta name="keywords" content="Morris Threading Traversal">
+  <meta name="description" content="Description:Given a 2D board containing &amp;#39;X&amp;#39; and &amp;#39;O&amp;#39; (the letter O), capture all regions surrounded by &amp;#39;X&amp;#39;. A region is captured by flipping all &amp;#39;O&amp;#39;s into &amp;#39;X&amp;#39;s i">
+<meta name="keywords" content="Dfs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="99. Recover Binary Search Tree">
-<meta property="og:url" content="http://yoursite.com/2019/07/05/99-Recover-Binary-Search-Tree/index.html">
+<meta property="og:title" content="130. Surrounded Regions">
+<meta property="og:url" content="http://yoursite.com/2019/09/10/130-Surrounded-Regions/index.html">
 <meta property="og:site_name" content="Coding Park">
-<meta property="og:description" content="Description:Two elements of a binary search tree (BST) are swapped by mistake. Recover the tree without changing its structure. Example 1: 123456789101112131415Input: [1,3,null,null,2]   1  / 3  \   2">
+<meta property="og:description" content="Description:Given a 2D board containing &amp;#39;X&amp;#39; and &amp;#39;O&amp;#39; (the letter O), capture all regions surrounded by &amp;#39;X&amp;#39;. A region is captured by flipping all &amp;#39;O&amp;#39;s into &amp;#39;X&amp;#39;s i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-06T03:44:16.464Z">
+<meta property="og:updated_time" content="2019-09-09T17:27:32.072Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="99. Recover Binary Search Tree">
-<meta name="twitter:description" content="Description:Two elements of a binary search tree (BST) are swapped by mistake. Recover the tree without changing its structure. Example 1: 123456789101112131415Input: [1,3,null,null,2]   1  / 3  \   2">
+<meta name="twitter:title" content="130. Surrounded Regions">
+<meta name="twitter:description" content="Description:Given a 2D board containing &amp;#39;X&amp;#39; and &amp;#39;O&amp;#39; (the letter O), capture all regions surrounded by &amp;#39;X&amp;#39;. A region is captured by flipping all &amp;#39;O&amp;#39;s into &amp;#39;X&amp;#39;s i">
 
 
 
@@ -132,7 +132,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/05/99-Recover-Binary-Search-Tree/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/10/130-Surrounded-Regions/">
 
 
 
@@ -142,7 +142,7 @@
   };
 </script>
 
-  <title>99. Recover Binary Search Tree | Coding Park</title>
+  <title>130. Surrounded Regions | Coding Park</title>
   
 
 
@@ -380,7 +380,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/05/99-Recover-Binary-Search-Tree/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/10/130-Surrounded-Regions/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -397,7 +397,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">99. Recover Binary Search Tree
+          <h1 class="post-title" itemprop="name headline">130. Surrounded Regions
 
               
             
@@ -423,24 +423,12 @@
                 
               
 
-              <time title="创建于：2019-07-05 21:41:03" itemprop="dateCreated datePublished" datetime="2019-07-05T21:41:03+08:00">2019-07-05</time>
+              <time title="创建于：2019-09-10 01:25:41 / 更新于：01:27:32" itemprop="dateCreated datePublished" datetime="2019-09-10T01:25:41+08:00">2019-09-10</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="更新于：2019-07-06 11:44:16" itemprop="dateModified" datetime="2019-07-06T11:44:16+08:00">2019-07-06</time>
               
             
           </span>
@@ -499,28 +487,18 @@
       
 
       
-        <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Two elements of a binary search tree (BST) are swapped by mistake.</p>
-<p>Recover the tree without changing its structure.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,3,null,null,2]</span><br><span class="line"></span><br><span class="line">   1</span><br><span class="line">  /</span><br><span class="line"> 3</span><br><span class="line">  \</span><br><span class="line">   2</span><br><span class="line"></span><br><span class="line">Output: [3,1,null,null,2]</span><br><span class="line"></span><br><span class="line">   3</span><br><span class="line">  /</span><br><span class="line"> 1</span><br><span class="line">  \</span><br><span class="line">   2</span><br></pre></td></tr></table></figure>
+        <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a 2D board containing <code>&#39;X&#39;</code> and <code>&#39;O&#39;</code> (<strong>the letter O</strong>), capture all regions surrounded by <code>&#39;X&#39;</code>.</p>
+<p>A region is captured by flipping all <code>&#39;O&#39;</code>s into <code>&#39;X&#39;</code>s in that surrounded region.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X X X X</span><br><span class="line">X O O X</span><br><span class="line">X X O X</span><br><span class="line">X O X X</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>It is not so difficult to use recursion to solve this problem.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> TreeNode back = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">public</span> TreeNode big = <span class="keyword">new</span> TreeNode(Integer.MAX_VALUE);</span><br><span class="line">    <span class="keyword">public</span> TreeNode  small = <span class="keyword">new</span> TreeNode(Integer.MAX_VALUE);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> flag;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">midTree</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root.left != <span class="keyword">null</span>) midTree(root.left);</span><br><span class="line">        <span class="keyword">if</span>( back == <span class="keyword">null</span> || back.val &lt; root.val ) back = root;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(flag == <span class="number">0</span>)&#123;</span><br><span class="line">                big = back;</span><br><span class="line">                <span class="comment">//System.out.println(back.val);</span></span><br><span class="line">                flag = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(flag == <span class="number">1</span>)&#123;</span><br><span class="line">                small = root;</span><br><span class="line">               <span class="comment">// System.out.println(small.val);</span></span><br><span class="line">            &#125;</span><br><span class="line">            back = root;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(root.right != <span class="keyword">null</span>) midTree(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">recoverTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        midTree(root);</span><br><span class="line">        <span class="keyword">if</span>(small.val == Integer.MAX_VALUE) small = back;</span><br><span class="line">        <span class="keyword">int</span> temp = big.val;</span><br><span class="line">        big.val = small.val;</span><br><span class="line">        small.val = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>After running your function, the board should be:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X X X X</span><br><span class="line">X X X X</span><br><span class="line">X X X X</span><br><span class="line">X O X X</span><br></pre></td></tr></table></figure>
 
-<p>But the solution used O(n) space,we need to use Morris Threading Traversal.</p>
-<p>线索二叉树也就是根据二叉树中空闲的指针，指向某序遍历的后继节点，在在此题中也就是中序遍历的后续节点。</p>
-<p>从而能够不递归而中序遍历二叉树。</p>
-<p>步骤为：</p>
-<p>1.若当前节点没有左子树，则输出当前节点，并将当前节点的右孩子作为当前节点，再重复1步骤；</p>
-<p>若当前节点有左子树则转至2；</p>
-<p>若当前节点为空则遍历结束</p>
-<p>2.当前节点有左子树，则首先寻找在中序遍历时当前节点的前驱节点：</p>
-<p> 2.1若前驱节点的右子树为空，则将前驱节点的右指针指向当前节点，并将当前节点的左孩子设为当前节点，转至步骤1</p>
-<p>2.2 若前驱节点的右孩子为当前节点，说明当前节点已经和前驱节点连接过并且当前节点的左子树已经遍历完成，则此时输出当前节点，将前驱节点的右指针重新设为空，并将当前节点的右孩子设为当前节点，转至步骤1</p>
-<p>参考自</p>
-<p>[<a href="https://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html]" target="_blank" rel="noopener">https://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html]</a>: </p>
-<p>代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> TreeNode pre = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">public</span> TreeNode big = <span class="keyword">new</span> TreeNode(Integer.MAX_VALUE);</span><br><span class="line">    <span class="keyword">public</span> TreeNode  small = <span class="keyword">new</span> TreeNode(Integer.MAX_VALUE);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> flag;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">recoverTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(root != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(root.left == <span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(pre == <span class="keyword">null</span>) pre = root;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(flag == <span class="number">0</span> &amp;&amp; pre.val &gt; root.val)&#123;</span><br><span class="line">                    big = pre;</span><br><span class="line">                    flag = <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(flag == <span class="number">1</span> &amp;&amp; pre.val &gt; root.val) small = root;</span><br><span class="line">                pre = root;</span><br><span class="line">                <span class="comment">//System.out.println(root.val + "  left");</span></span><br><span class="line">                root = root.right;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                TreeNode st = root.left;</span><br><span class="line">                <span class="keyword">while</span>(st.right != <span class="keyword">null</span> &amp;&amp; st.right != root) st = st.right;</span><br><span class="line">                <span class="keyword">if</span>(st.right == <span class="keyword">null</span>)&#123;</span><br><span class="line">                    st.right = root;</span><br><span class="line">                    root = root.left;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    st.right = <span class="keyword">null</span>;</span><br><span class="line">                    <span class="keyword">if</span>(pre == <span class="keyword">null</span>) pre = root;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(flag == <span class="number">0</span> &amp;&amp; pre.val &gt; root.val)&#123;</span><br><span class="line">                    big = pre;</span><br><span class="line">                    flag = <span class="number">1</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                <span class="keyword">if</span>(flag == <span class="number">1</span> &amp;&amp; pre.val &gt; root.val) small = root;</span><br><span class="line">                pre = root;</span><br><span class="line">                  <span class="comment">//  System.out.println(root.val + "   right");</span></span><br><span class="line">                root = root.right;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> temp = small.val;</span><br><span class="line">        small.val = big.val;</span><br><span class="line">        big.val = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Explanation:</strong></p>
+<p>Surrounded regions shouldn’t be on the border, which means that any <code>&#39;O&#39;</code> on the border of the board are not flipped to <code>&#39;X&#39;</code>. Any <code>&#39;O&#39;</code> that is not on the border and it is not connected to an <code>&#39;O&#39;</code> on the border will be flipped to <code>&#39;X&#39;</code>. Two cells are connected if they are adjacent cells connected horizontally or vertically.</p>
+<h2 id="Soultion"><a href="#Soultion" class="headerlink" title="Soultion:"></a>Soultion:</h2><p>simple dfs</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">char</span> [][]board,<span class="keyword">boolean</span> [][]flag,<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x &lt; <span class="number">0</span> || x &gt;= board.length || y &lt; <span class="number">0</span> ||y &gt;= board[<span class="number">0</span>].length) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span>(flag[x][y] || board[x][y] == <span class="string">'X'</span>) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> [][]dir = <span class="keyword">new</span> <span class="keyword">int</span> [][]&#123;&#123;<span class="number">0</span>,<span class="number">1</span>&#125;,&#123;<span class="number">0</span>,-<span class="number">1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">0</span>&#125;,&#123;-<span class="number">1</span>,<span class="number">0</span>&#125;&#125;;</span><br><span class="line">        flag[x][y] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> xx = x + dir[i][<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">int</span> yy = y + dir[i][<span class="number">1</span>];     </span><br><span class="line">            dfs(board,flag,xx,yy);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">char</span>[][] board)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(board.length == <span class="number">0</span> || board[<span class="number">0</span>].length == <span class="number">0</span>) <span class="keyword">return</span> ;</span><br><span class="line">        <span class="keyword">boolean</span> [][]flag = <span class="keyword">new</span> <span class="keyword">boolean</span>[board.length + <span class="number">3</span>][board[<span class="number">0</span>].length + <span class="number">3</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; board[<span class="number">0</span>].length;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(board[<span class="number">0</span>][j] == <span class="string">'O'</span>)</span><br><span class="line">                dfs(board,flag,<span class="number">0</span>,j);</span><br><span class="line">            <span class="keyword">if</span>(board[board.length - <span class="number">1</span>][j] == <span class="string">'O'</span>)</span><br><span class="line">                dfs(board,flag,board.length - <span class="number">1</span>,j);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; board.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(board[i][<span class="number">0</span>] == <span class="string">'O'</span>)</span><br><span class="line">                dfs(board,flag,i,<span class="number">0</span>);</span><br><span class="line">            <span class="keyword">if</span>(board[i][board[<span class="number">0</span>].length - <span class="number">1</span>] == <span class="string">'O'</span>)</span><br><span class="line">                dfs(board,flag,i,board[<span class="number">0</span>].length - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; board.length;i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; board[<span class="number">0</span>].length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(board[i][j] == <span class="string">'O'</span> &amp;&amp; !flag[i][j])&#123;</span><br><span class="line">                    board[i][j] = <span class="string">'X'</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -540,12 +518,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/07/05/99-Recover-Binary-Search-Tree/">99. Recover Binary Search Tree</a></p>
+  <p><span>本文标题:</span><a href="/2019/09/10/130-Surrounded-Regions/">130. Surrounded Regions</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Atss 的个人博客">Atss</a></p>
-  <p><span>发布时间:</span>2019年07月05日 - 21:07</p>
-  <p><span>最后更新:</span>2019年07月06日 - 11:07</p>
-  <p><span>原始链接:</span><a href="/2019/07/05/99-Recover-Binary-Search-Tree/" title="99. Recover Binary Search Tree">http://yoursite.com/2019/07/05/99-Recover-Binary-Search-Tree/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/07/05/99-Recover-Binary-Search-Tree/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年09月10日 - 01:09</p>
+  <p><span>最后更新:</span>2019年09月10日 - 01:09</p>
+  <p><span>原始链接:</span><a href="/2019/09/10/130-Surrounded-Regions/" title="130. Surrounded Regions">http://yoursite.com/2019/09/10/130-Surrounded-Regions/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/09/10/130-Surrounded-Regions/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -623,7 +601,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Morris-Threading-Traversal/" rel="tag"># Morris Threading Traversal</a>
+            <a href="/tags/Dfs/" rel="tag"># Dfs</a>
           
         </div>
       
@@ -691,8 +669,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/05/97-Interleaving-String/" rel="next" title="97. Interleaving String">
-                <i class="fa fa-chevron-left"></i> 97. Interleaving String
+              <a href="/2019/09/10/132-Palindrome-Partitioning-II/" rel="next" title="132. Palindrome Partitioning II">
+                <i class="fa fa-chevron-left"></i> 132. Palindrome Partitioning II
               </a>
             
           </div>
@@ -700,10 +678,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/" rel="prev" title="103. Binary Tree Zigzag Level Order Traversal">
-                103. Binary Tree Zigzag Level Order Traversal <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -907,7 +881,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Soultion"><span class="nav-number">2.</span> <span class="nav-text">Soultion:</span></a></li></ol></div>
             
 
           </div>

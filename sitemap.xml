@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/09/10/132-Palindrome-Partitioning-II/</loc>
+    
+    <lastmod>2019-09-09T17:28:07.673Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/09/10/130-Surrounded-Regions/</loc>
+    
+    <lastmod>2019-09-09T17:27:32.072Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/09/10/131-Palindrome-Partitioning/</loc>
+    
+    <lastmod>2019-09-09T17:17:50.989Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/16/120-Triangle/</loc>
+    
+    <lastmod>2019-09-09T17:17:12.118Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/20/123-Best-Time-to-Buy-and-Sell-Stock-III/</loc>
+    
+    <lastmod>2019-09-09T17:17:07.192Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/09/06/126-Word-Ladder-II/</loc>
     
     <lastmod>2019-09-06T14:11:10.370Z</lastmod>
@@ -12,20 +47,6 @@
     <loc>http://yoursite.com/2019/09/06/127-Word-Ladder/</loc>
     
     <lastmod>2019-09-06T14:07:11.678Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/07/20/123-Best-Time-to-Buy-and-Sell-Stock-III/</loc>
-    
-    <lastmod>2019-07-20T03:11:45.203Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/07/16/120-Triangle/</loc>
-    
-    <lastmod>2019-07-16T02:36:20.381Z</lastmod>
     
   </url>
   

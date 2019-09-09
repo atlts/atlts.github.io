@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-06T14:11:10.370Z</updated>
+  <updated>2019-09-09T17:27:32.072Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,84 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>130. Surrounded Regions</title>
+    <link href="http://yoursite.com/2019/09/10/130-Surrounded-Regions/"/>
+    <id>http://yoursite.com/2019/09/10/130-Surrounded-Regions/</id>
+    <published>2019-09-09T17:25:41.000Z</published>
+    <updated>2019-09-09T17:27:32.072Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a 2D board containing
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Dfs" scheme="http://yoursite.com/tags/Dfs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>132. Palindrome Partitioning II</title>
+    <link href="http://yoursite.com/2019/09/10/132-Palindrome-Partitioning-II/"/>
+    <id>http://yoursite.com/2019/09/10/132-Palindrome-Partitioning-II/</id>
+    <published>2019-09-09T17:16:04.000Z</published>
+    <updated>2019-09-09T17:28:07.673Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a string &lt;em&gt;s&lt;/em&gt;,
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Dp" scheme="http://yoursite.com/tags/Dp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>131. Palindrome Partitioning</title>
+    <link href="http://yoursite.com/2019/09/10/131-Palindrome-Partitioning/"/>
+    <id>http://yoursite.com/2019/09/10/131-Palindrome-Partitioning/</id>
+    <published>2019-09-09T17:13:42.000Z</published>
+    <updated>2019-09-09T17:17:50.989Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a string &lt;em&gt;s&lt;/em&gt;,
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="dfs" scheme="http://yoursite.com/tags/dfs/"/>
+    
+  </entry>
   
   <entry>
     <title>126. Word Ladder II</title>
@@ -73,7 +151,7 @@
     <link href="http://yoursite.com/2019/07/20/123-Best-Time-to-Buy-and-Sell-Stock-III/"/>
     <id>http://yoursite.com/2019/07/20/123-Best-Time-to-Buy-and-Sell-Stock-III/</id>
     <published>2019-07-20T02:57:38.000Z</published>
-    <updated>2019-07-20T03:11:45.203Z</updated>
+    <updated>2019-09-09T17:17:07.192Z</updated>
     
     <summary type="html">
     
@@ -90,7 +168,7 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
+      <category term="Dp" scheme="http://yoursite.com/tags/Dp/"/>
     
   </entry>
   
@@ -99,7 +177,7 @@
     <link href="http://yoursite.com/2019/07/16/120-Triangle/"/>
     <id>http://yoursite.com/2019/07/16/120-Triangle/</id>
     <published>2019-07-16T02:24:52.000Z</published>
-    <updated>2019-07-16T02:36:20.381Z</updated>
+    <updated>2019-09-09T17:17:12.118Z</updated>
     
     <summary type="html">
     
@@ -116,7 +194,7 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
+      <category term="Dp" scheme="http://yoursite.com/tags/Dp/"/>
     
   </entry>
   
@@ -452,84 +530,6 @@
     
     
       <category term="simulation" scheme="http://yoursite.com/tags/simulation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>91.Decode Ways</title>
-    <link href="http://yoursite.com/2019/06/12/91-Decode-Ways/"/>
-    <id>http://yoursite.com/2019/06/12/91-Decode-Ways/</id>
-    <published>2019-06-12T13:43:35.000Z</published>
-    <updated>2019-06-12T13:45:51.427Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h5 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h5&gt;&lt;p&gt;A message containing letters
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="DP" scheme="http://yoursite.com/tags/DP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>90.Subsets II</title>
-    <link href="http://yoursite.com/2019/06/12/90.Subsets%20II/"/>
-    <id>http://yoursite.com/2019/06/12/90.Subsets II/</id>
-    <published>2019-06-12T13:06:28.000Z</published>
-    <updated>2019-06-12T13:43:44.249Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h5 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h5&gt;&lt;p&gt;Given a collection of integers
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="DFS" scheme="http://yoursite.com/tags/DFS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>87.Scramble String</title>
-    <link href="http://yoursite.com/2019/06/11/87-Scramble-String/"/>
-    <id>http://yoursite.com/2019/06/11/87-Scramble-String/</id>
-    <published>2019-06-11T09:21:04.000Z</published>
-    <updated>2019-06-11T13:34:21.303Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a string s1, we may
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="recursive" scheme="http://yoursite.com/tags/recursive/"/>
     
   </entry>
   
