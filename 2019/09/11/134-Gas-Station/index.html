@@ -111,18 +111,18 @@
 
 
 
-  <meta name="description" content="Description:Given a string S and a string T, count the number of distinct subsequences of Swhich equals T. A subsequence of a string is a new string which is formed from the original string by deletin">
-<meta name="keywords" content="DP">
+  <meta name="description" content="Description:There are N gas stations along a circular route, where the amount of gas at station i is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from statio">
+<meta name="keywords" content="Simulation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="115. Distinct Subsequences">
-<meta property="og:url" content="http://yoursite.com/2019/07/12/115-Distinct-Subsequences/index.html">
+<meta property="og:title" content="134. Gas Station">
+<meta property="og:url" content="http://yoursite.com/2019/09/11/134-Gas-Station/index.html">
 <meta property="og:site_name" content="Coding Park">
-<meta property="og:description" content="Description:Given a string S and a string T, count the number of distinct subsequences of Swhich equals T. A subsequence of a string is a new string which is formed from the original string by deletin">
+<meta property="og:description" content="Description:There are N gas stations along a circular route, where the amount of gas at station i is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from statio">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-12T04:00:38.491Z">
+<meta property="og:updated_time" content="2019-09-11T13:04:25.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="115. Distinct Subsequences">
-<meta name="twitter:description" content="Description:Given a string S and a string T, count the number of distinct subsequences of Swhich equals T. A subsequence of a string is a new string which is formed from the original string by deletin">
+<meta name="twitter:title" content="134. Gas Station">
+<meta name="twitter:description" content="Description:There are N gas stations along a circular route, where the amount of gas at station i is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from statio">
 
 
 
@@ -132,7 +132,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/12/115-Distinct-Subsequences/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/11/134-Gas-Station/">
 
 
 
@@ -142,7 +142,7 @@
   };
 </script>
 
-  <title>115. Distinct Subsequences | Coding Park</title>
+  <title>134. Gas Station | Coding Park</title>
   
 
 
@@ -380,7 +380,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/115-Distinct-Subsequences/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/11/134-Gas-Station/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -397,7 +397,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">115. Distinct Subsequences
+          <h1 class="post-title" itemprop="name headline">134. Gas Station
 
               
             
@@ -423,7 +423,7 @@
                 
               
 
-              <time title="创建于：2019-07-12 11:51:17 / 更新于：12:00:38" itemprop="dateCreated datePublished" datetime="2019-07-12T11:51:17+08:00">2019-07-12</time>
+              <time title="创建于：2019-09-11 20:57:49 / 更新于：21:04:25" itemprop="dateCreated datePublished" datetime="2019-09-11T20:57:49+08:00">2019-09-11</time>
             
 
             
@@ -487,17 +487,22 @@
       
 
       
-        <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a string <strong>S</strong> and a string <strong>T</strong>, count the number of distinct subsequences of <strong>S</strong>which equals <strong>T</strong>.</p>
-<p>A subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, <code>&quot;ACE&quot;</code> is a subsequence of <code>&quot;ABCDE&quot;</code>while <code>&quot;AEC&quot;</code> is not).</p>
+        <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>There are <em>N</em> gas stations along a circular route, where the amount of gas at station <em>i</em> is <code>gas[i]</code>.</p>
+<p>You have a car with an unlimited gas tank and it costs <code>cost[i]</code> of gas to travel from station <em>i</em> to its next station (<em>i</em>+1). You begin the journey with an empty tank at one of the gas stations.</p>
+<p>Return the starting gas station’s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>If there exists a solution, it is guaranteed to be unique.</li>
+<li>Both input arrays are non-empty and have the same length.</li>
+<li>Each element in the input arrays is a non-negative integer.</li>
+</ul>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Input: S = "rabbbit", T = "rabbit"</span><br><span class="line">Output: 3</span><br><span class="line">Explanation:</span><br><span class="line"></span><br><span class="line">As shown below, there are 3 ways you can generate "rabbit" from S.</span><br><span class="line">(The caret symbol ^ means the chosen letters)</span><br><span class="line"></span><br><span class="line">rabbbit</span><br><span class="line">^^^^ ^^</span><br><span class="line">rabbbit</span><br><span class="line">^^ ^^^^</span><br><span class="line">rabbbit</span><br><span class="line">^^^ ^^^</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Input: </span><br><span class="line">gas  = [1,2,3,4,5]</span><br><span class="line">cost = [3,4,5,1,2]</span><br><span class="line"></span><br><span class="line">Output: 3</span><br><span class="line"></span><br><span class="line">Explanation:</span><br><span class="line">Start at station 3 (index 3) and fill up with 4 unit of gas. Your tank = 0 + 4 = 4</span><br><span class="line">Travel to station 4. Your tank = 4 - 1 + 5 = 8</span><br><span class="line">Travel to station 0. Your tank = 8 - 2 + 1 = 7</span><br><span class="line">Travel to station 1. Your tank = 7 - 3 + 2 = 6</span><br><span class="line">Travel to station 2. Your tank = 6 - 4 + 3 = 5</span><br><span class="line">Travel to station 3. The cost is 5. Your gas is just enough to travel back to station 3.</span><br><span class="line">Therefore, return 3 as the starting index.</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution1"><a href="#Solution1" class="headerlink" title="Solution1:"></a>Solution1:</h2><p>2D Dynamic Programming  dp[i][j]  represent the number of distinct subsequences of s(0~ i-1 ) which t(0 ~ j-1 ).</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDistinct</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(t.length() == <span class="number">0</span> || s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> [][]dp = <span class="keyword">new</span> <span class="keyword">int</span>[s.length() + <span class="number">3</span>][t.length() + <span class="number">3</span>];</span><br><span class="line">     </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;dp.length;i++) dp[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= s.length();i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>;j &lt;= t.length();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i &lt; j) dp[i][j] = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(i == j) dp[i][j] = ((s.charAt(i - <span class="number">1</span>) == t.charAt(j - <span class="number">1</span>)) &amp;&amp; dp[i - <span class="number">1</span>][j - <span class="number">1</span>] == <span class="number">1</span>) ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">if</span>(s.charAt(i - <span class="number">1</span>) == t.charAt(j - <span class="number">1</span>)) dp[i][j] = dp[i - <span class="number">1</span>][j] + dp[i - <span class="number">1</span>][j - <span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">else</span> dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">                &#125;</span><br><span class="line">               <span class="comment">// System.out.println(i + " " + j + " " + dp[i][j]);</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[s.length()][t.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>we can see that dp[i~1][…] is all we need to get dp[i],so we could find a way to use 1d   Dynamic Programming.</p>
-<p>And we must do it in <em>reversed order</em>  to keep dp[i~1][j]  from becoming dp[i][j]  too early.</p>
-<h2 id="Solution2"><a href="#Solution2" class="headerlink" title="Solution2:"></a>Solution2:</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDistinct</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(t.length() == <span class="number">0</span> || s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> []dp = <span class="keyword">new</span> <span class="keyword">int</span>[t.length() + <span class="number">3</span>];</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= s.length();i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = t.length();j &gt;= <span class="number">1</span>;j--)&#123;</span><br><span class="line">              </span><br><span class="line">                 <span class="keyword">if</span>(i == j) dp[j] = ((s.charAt(i - <span class="number">1</span>) == t.charAt(j - <span class="number">1</span>)) &amp;&amp; dp[j - <span class="number">1</span>] == <span class="number">1</span>) ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                 <span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i - <span class="number">1</span>) == t.charAt(j - <span class="number">1</span>)) dp[j] = dp[j] + dp[j - <span class="number">1</span>];</span><br><span class="line">               <span class="comment">// System.out.println(i + " " + j + " " + dp[j]);</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[t.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>If sumGas &lt; sumCost,there couldn’t be a gas station from which we can travel around.</p>
+<p>We can assume we start from 0th gas station and record the minimum  sumPro when we reach each gas station,and update sumPro when we try to start from (1st<del>~</del>Nth) gas station.</p>
+<p>And if sumPro &gt; 0,we get the answer.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">canCompleteCircuit</span><span class="params">(<span class="keyword">int</span>[] gas, <span class="keyword">int</span>[] cost)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sumGas = <span class="number">0</span>,sumCost = <span class="number">0</span>,sumPro = Integer.MAX_VALUE,run = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(gas.length == <span class="number">0</span>|| cost.length == <span class="number">0</span>|| gas.length != cost.length)&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; gas.length;i++)&#123;</span><br><span class="line">            sumGas += gas[i];</span><br><span class="line">            sumCost += cost[i];</span><br><span class="line">            run += gas[i] - cost[i];</span><br><span class="line">            sumPro = Math.min(run,sumPro);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(sumGas &lt; sumCost)&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(sumPro &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; gas.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(sumPro - (gas[i - <span class="number">1</span>] - cost[i - <span class="number">1</span>]) &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">            sumPro -= gas[i - <span class="number">1</span>] -cost[i - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -517,12 +522,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/07/12/115-Distinct-Subsequences/">115. Distinct Subsequences</a></p>
+  <p><span>本文标题:</span><a href="/2019/09/11/134-Gas-Station/">134. Gas Station</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Atss 的个人博客">Atss</a></p>
-  <p><span>发布时间:</span>2019年07月12日 - 11:07</p>
-  <p><span>最后更新:</span>2019年07月12日 - 12:07</p>
-  <p><span>原始链接:</span><a href="/2019/07/12/115-Distinct-Subsequences/" title="115. Distinct Subsequences">http://yoursite.com/2019/07/12/115-Distinct-Subsequences/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/07/12/115-Distinct-Subsequences/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年09月11日 - 20:09</p>
+  <p><span>最后更新:</span>2019年09月11日 - 21:09</p>
+  <p><span>原始链接:</span><a href="/2019/09/11/134-Gas-Station/" title="134. Gas Station">http://yoursite.com/2019/09/11/134-Gas-Station/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/09/11/134-Gas-Station/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -600,7 +605,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/DP/" rel="tag"># DP</a>
+            <a href="/tags/Simulation/" rel="tag"># Simulation</a>
           
         </div>
       
@@ -668,8 +673,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/08/114-Flatten-Binary-Tree-to-Linked-List/" rel="next" title="114. Flatten Binary Tree to Linked List">
-                <i class="fa fa-chevron-left"></i> 114. Flatten Binary Tree to Linked List
+              <a href="/2019/09/11/133-Clone-Graph/" rel="next" title="133. Clone Graph">
+                <i class="fa fa-chevron-left"></i> 133. Clone Graph
               </a>
             
           </div>
@@ -677,10 +682,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/13/116-Populating-Next-Right-Pointers-in-Each-Node/" rel="prev" title="116. Populating Next Right Pointers in Each Node">
-                116. Populating Next Right Pointers in Each Node <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -888,7 +889,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution1"><span class="nav-number">2.</span> <span class="nav-text">Solution1:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution2"><span class="nav-number">3.</span> <span class="nav-text">Solution2:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution:</span></a></li></ol></div>
             
 
           </div>

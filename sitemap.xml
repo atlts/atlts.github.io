@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/09/11/134-Gas-Station/</loc>
+    
+    <lastmod>2019-09-11T13:04:25.067Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/09/11/133-Clone-Graph/</loc>
+    
+    <lastmod>2019-09-11T12:57:19.667Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/09/10/132-Palindrome-Partitioning-II/</loc>
     
     <lastmod>2019-09-09T17:28:07.673Z</lastmod>
