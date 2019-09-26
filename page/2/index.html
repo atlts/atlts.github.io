@@ -263,7 +263,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">16</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">29</span></a>
 
   </li>
         
@@ -301,7 +301,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">27</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">49</span></a>
 
   </li>
         
@@ -379,7 +379,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/13/117-Populating-Next-Right-Pointers-in-Each-Node-II/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/154-Find-Minimum-in-Rotated-Sorted-Array-II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -399,7 +399,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/13/117-Populating-Next-Right-Pointers-in-Each-Node-II/" class="post-title-link" itemprop="url">117. Populating Next Right Pointers in Each Node II</a>
+                <a href="/2019/09/19/154-Find-Minimum-in-Rotated-Sorted-Array-II/" class="post-title-link" itemprop="url">154. Find Minimum in Rotated Sorted Array II</a>
               
             
           </h1>
@@ -424,7 +424,7 @@
                 
               
 
-              <time title="创建于：2019-07-13 09:45:22 / 更新于：09:54:44" itemprop="dateCreated datePublished" datetime="2019-07-13T09:45:22+08:00">2019-07-13</time>
+              <time title="创建于：2019-09-19 11:25:00 / 更新于：11:27:09" itemprop="dateCreated datePublished" datetime="2019-09-19T11:25:00+08:00">2019-09-19</time>
             
 
             
@@ -483,373 +483,15 @@
       
         
           
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a binary tree</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct Node &#123;</span><br><span class="line">  int val;</span><br><span class="line">  Node *left;</span><br><span class="line">  Node *right;</span><br><span class="line">  Node *next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to <code>NULL</code>.</p>
-<p>Initially, all next pointers are set to <code>NULL</code>.</p>
-<p><strong>Example:</strong></p>
-<p><img src="/.com//E:%5Chexo%5Csource_posts%5C117-Populating-Next-Right-Pointers-in-Each-Node-II%5C117_sample.png" alt="https://assets.leetcode.com/uploads/2019/02/15/117_sample.png"></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: &#123;"$id":"1","left":&#123;"$id":"2","left":&#123;"$id":"3","left":null,"next":null,"right":null,"val":4&#125;,"next":null,"right":&#123;"$id":"4","left":null,"next":null,"right":null,"val":5&#125;,"val":2&#125;,"next":null,"right":&#123;"$id":"5","left":null,"next":null,"right":&#123;"$id":"6","left":null,"next":null,"right":null,"val":7&#125;,"val":3&#125;,"val":1&#125;</span><br><span class="line"></span><br><span class="line">Output: &#123;"$id":"1","left":&#123;"$id":"2","left":&#123;"$id":"3","left":null,"next":&#123;"$id":"4","left":null,"next":&#123;"$id":"5","left":null,"next":null,"right":null,"val":7&#125;,"right":null,"val":5&#125;,"right":null,"val":4&#125;,"next":&#123;"$id":"6","left":null,"next":null,"right":&#123;"$ref":"5"&#125;,"val":3&#125;,"right":&#123;"$ref":"4"&#125;,"val":2&#125;,"next":null,"right":&#123;"$ref":"6"&#125;,"val":1&#125;</span><br><span class="line"></span><br><span class="line">Explanation: Given the above binary tree (Figure A), your function should populate each next pointer to point to its next right node, just like in Figure B.</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>level-order traversal.</p>
-<p>Head represent the head of next level;</p>
-<p>Pre represent the next node that will get its  *next.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Node <span class="title">connect</span><span class="params">(Node root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span> root;</span><br><span class="line">        Node pre,head,cur;</span><br><span class="line">        root.next = <span class="keyword">null</span>;</span><br><span class="line">        cur = root;</span><br><span class="line">        pre = <span class="keyword">null</span>;</span><br><span class="line">        head = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">while</span>(cur != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">while</span>(cur != <span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(cur.left != <span class="keyword">null</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(pre != <span class="keyword">null</span>)&#123;</span><br><span class="line">                        pre.next = cur.left;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span>&#123;</span><br><span class="line">                        head = cur.left;</span><br><span class="line">                    &#125;</span><br><span class="line">                    pre = cur.left;</span><br><span class="line">                &#125;</span><br><span class="line">                    <span class="keyword">if</span>(cur.right != <span class="keyword">null</span>)&#123;</span><br><span class="line">                        <span class="keyword">if</span>(pre != <span class="keyword">null</span>)&#123;</span><br><span class="line">                            pre.next = cur.right;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">else</span> head = cur.right;</span><br><span class="line">                        pre = cur.right;</span><br><span class="line">                    &#125;</span><br><span class="line">                cur = cur.next;</span><br><span class="line">            &#125;</span><br><span class="line">            cur = head;</span><br><span class="line">            head = <span class="keyword">null</span>;</span><br><span class="line">            pre = <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-      
-    </div>
-    
-
-    
-      
-    
-    
-
-    
-      <div>
-        
-      </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/13/116-Populating-Next-Right-Pointers-in-Each-Node/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="Trip Of Learning Code">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Coding Park">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/13/116-Populating-Next-Right-Pointers-in-Each-Node/" class="post-title-link" itemprop="url">116. Populating Next Right Pointers in Each Node</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2019-07-13 09:41:05 / 更新于：09:56:39" itemprop="dateCreated datePublished" datetime="2019-07-13T09:41:05+08:00">2019-07-13</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>You are given a <strong>perfect binary tree</strong> where all leaves are on the same level, and every parent has two children. The binary tree has the following definition:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct Node &#123;</span><br><span class="line">  int val;</span><br><span class="line">  Node *left;</span><br><span class="line">  Node *right;</span><br><span class="line">  Node *next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to <code>NULL</code>.</p>
-<p>Initially, all next pointers are set to <code>NULL</code>.</p>
-<p><strong>Example:</strong></p>
-<p><img src="/.com//E:%5Chexo%5Csource_posts%5C116-Populating-Next-Right-Pointers-in-Each-Node%5C116_sample.png" alt="https://assets.leetcode.com/uploads/2019/02/15/117_sample.png"></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: &#123;"$id":"1","left":&#123;"$id":"2","left":&#123;"$id":"3","left":null,"next":null,"right":null,"val":4&#125;,"next":null,"right":&#123;"$id":"4","left":null,"next":null,"right":null,"val":5&#125;,"val":2&#125;,"next":null,"right":&#123;"$id":"5","left":&#123;"$id":"6","left":null,"next":null,"right":null,"val":6&#125;,"next":null,"right":&#123;"$id":"7","left":null,"next":null,"right":null,"val":7&#125;,"val":3&#125;,"val":1&#125;</span><br><span class="line"></span><br><span class="line">Output: &#123;"$id":"1","left":&#123;"$id":"2","left":&#123;"$id":"3","left":null,"next":&#123;"$id":"4","left":null,"next":&#123;"$id":"5","left":null,"next":&#123;"$id":"6","left":null,"next":null,"right":null,"val":7&#125;,"right":null,"val":6&#125;,"right":null,"val":5&#125;,"right":null,"val":4&#125;,"next":&#123;"$id":"7","left":&#123;"$ref":"5"&#125;,"next":null,"right":&#123;"$ref":"6"&#125;,"val":3&#125;,"right":&#123;"$ref":"4"&#125;,"val":2&#125;,"next":null,"right":&#123;"$ref":"7"&#125;,"val":1&#125;</span><br><span class="line"></span><br><span class="line">Explanation: Given the above perfect binary tree (Figure A), your function should populate each next pointer to point to its next right node, just like in Figure B.</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>Use recursion.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">makePoint</span><span class="params">(Node root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root.left == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        root.left.next = root.right;</span><br><span class="line">        <span class="keyword">if</span>(root.next != <span class="keyword">null</span>) root.right.next = root.next.left;</span><br><span class="line">        <span class="keyword">else</span> root.next = <span class="keyword">null</span>;</span><br><span class="line">        makePoint(root.left);</span><br><span class="line">        makePoint(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Node <span class="title">connect</span><span class="params">(Node root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span> root;</span><br><span class="line">        root.next = <span class="keyword">null</span>;</span><br><span class="line">        makePoint(root);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-      
-    </div>
-    
-
-    
-      
-    
-    
-
-    
-      <div>
-        
-      </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/115-Distinct-Subsequences/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="Trip Of Learning Code">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Coding Park">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/12/115-Distinct-Subsequences/" class="post-title-link" itemprop="url">115. Distinct Subsequences</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2019-07-12 11:51:17 / 更新于：12:00:38" itemprop="dateCreated datePublished" datetime="2019-07-12T11:51:17+08:00">2019-07-12</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a string <strong>S</strong> and a string <strong>T</strong>, count the number of distinct subsequences of <strong>S</strong>which equals <strong>T</strong>.</p>
-<p>A subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, <code>&quot;ACE&quot;</code> is a subsequence of <code>&quot;ABCDE&quot;</code>while <code>&quot;AEC&quot;</code> is not).</p>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
+<p>(i.e.,  <code>[0,1,2,4,5,6,7]</code> might become  <code>[4,5,6,7,0,1,2]</code>).</p>
+<p>Find the minimum element.</p>
+<p>The array may contain duplicates.</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Input: S = "rabbbit", T = "rabbit"</span><br><span class="line">Output: 3</span><br><span class="line">Explanation:</span><br><span class="line"></span><br><span class="line">As shown below, there are 3 ways you can generate "rabbit" from S.</span><br><span class="line">(The caret symbol ^ means the chosen letters)</span><br><span class="line"></span><br><span class="line">rabbbit</span><br><span class="line">^^^^ ^^</span><br><span class="line">rabbbit</span><br><span class="line">^^ ^^^^</span><br><span class="line">rabbbit</span><br><span class="line">^^^ ^^^</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,3,5]</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution1"><a href="#Solution1" class="headerlink" title="Solution1:"></a>Solution1:</h2><p>2D Dynamic Programming  dp[i][j]  represent the number of distinct subsequences of s(0~ i-1 ) which t(0 ~ j-1 ).</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDistinct</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(t.length() == <span class="number">0</span> || s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> [][]dp = <span class="keyword">new</span> <span class="keyword">int</span>[s.length() + <span class="number">3</span>][t.length() + <span class="number">3</span>];</span><br><span class="line">     </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;dp.length;i++) dp[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= s.length();i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>;j &lt;= t.length();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i &lt; j) dp[i][j] = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(i == j) dp[i][j] = ((s.charAt(i - <span class="number">1</span>) == t.charAt(j - <span class="number">1</span>)) &amp;&amp; dp[i - <span class="number">1</span>][j - <span class="number">1</span>] == <span class="number">1</span>) ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">if</span>(s.charAt(i - <span class="number">1</span>) == t.charAt(j - <span class="number">1</span>)) dp[i][j] = dp[i - <span class="number">1</span>][j] + dp[i - <span class="number">1</span>][j - <span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">else</span> dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">                &#125;</span><br><span class="line">               <span class="comment">// System.out.println(i + " " + j + " " + dp[i][j]);</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[s.length()][t.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>we can see that dp[i~1][…] is all we need to get dp[i],so we could find a way to use 1d   Dynamic Programming.</p>
-<p>And we must do it in <em>reversed order</em>  to keep dp[i~1][j]  from becoming dp[i][j]  too early.</p>
-<h2 id="Solution2"><a href="#Solution2" class="headerlink" title="Solution2:"></a>Solution2:</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDistinct</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(t.length() == <span class="number">0</span> || s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> []dp = <span class="keyword">new</span> <span class="keyword">int</span>[t.length() + <span class="number">3</span>];</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= s.length();i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = t.length();j &gt;= <span class="number">1</span>;j--)&#123;</span><br><span class="line">              </span><br><span class="line">                 <span class="keyword">if</span>(i == j) dp[j] = ((s.charAt(i - <span class="number">1</span>) == t.charAt(j - <span class="number">1</span>)) &amp;&amp; dp[j - <span class="number">1</span>] == <span class="number">1</span>) ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                 <span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i - <span class="number">1</span>) == t.charAt(j - <span class="number">1</span>)) dp[j] = dp[j] + dp[j - <span class="number">1</span>];</span><br><span class="line">               <span class="comment">// System.out.println(i + " " + j + " " + dp[j]);</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[t.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>Be similiar to the 153rd question</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMin</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">        &#125;   </span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(l &lt; r)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[l] &lt; nums[r])&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid] &gt; nums[r])&#123;</span><br><span class="line">                l = mid + <span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(nums[mid] &lt; nums[r])&#123;</span><br><span class="line">                r = mid;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[l];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
           
@@ -912,7 +554,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/08/114-Flatten-Binary-Tree-to-Linked-List/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/153-Find-Minimum-in-Rotated-Sorted-Array/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -932,7 +574,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/08/114-Flatten-Binary-Tree-to-Linked-List/" class="post-title-link" itemprop="url">114. Flatten Binary Tree to Linked List</a>
+                <a href="/2019/09/19/153-Find-Minimum-in-Rotated-Sorted-Array/" class="post-title-link" itemprop="url">153. Find Minimum in Rotated Sorted Array</a>
               
             
           </h1>
@@ -957,7 +599,7 @@
                 
               
 
-              <time title="创建于：2019-07-08 20:37:31 / 更新于：20:39:42" itemprop="dateCreated datePublished" datetime="2019-07-08T20:37:31+08:00">2019-07-08</time>
+              <time title="创建于：2019-09-19 11:22:40 / 更新于：11:24:31" itemprop="dateCreated datePublished" datetime="2019-09-19T11:22:40+08:00">2019-09-19</time>
             
 
             
@@ -1016,15 +658,15 @@
       
         
           
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a binary tree, flatten it to a linked list in-place.</p>
-<p>For example, given the following tree:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    1</span><br><span class="line">   / \</span><br><span class="line">  2   5</span><br><span class="line"> / \   \</span><br><span class="line">3   4   6</span><br></pre></td></tr></table></figure>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
+<p>(i.e.,  <code>[0,1,2,4,5,6,7]</code> might become  <code>[4,5,6,7,0,1,2]</code>).</p>
+<p>Find the minimum element.</p>
+<p>You may assume no duplicate exists in the array.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,4,5,1,2] </span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
 
-<p>The flattened tree should look like:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line"> \</span><br><span class="line">  2</span><br><span class="line">   \</span><br><span class="line">    3</span><br><span class="line">     \</span><br><span class="line">      4</span><br><span class="line">       \</span><br><span class="line">        5</span><br><span class="line">         \</span><br><span class="line">          6</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>Use the post order traversal.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">flatten</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span>(root.left != <span class="keyword">null</span>) flatten(root.left);</span><br><span class="line">        <span class="keyword">if</span>(root.right != <span class="keyword">null</span>) flatten(root.right);</span><br><span class="line">        <span class="keyword">if</span>(root.left == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        TreeNode st = root.left;</span><br><span class="line">        <span class="keyword">while</span>(st.right != <span class="keyword">null</span>) st = st.right;</span><br><span class="line">        st.right = root.right;</span><br><span class="line">        root.right = root.left;</span><br><span class="line">        root.left = <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>Read the annotation</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMin</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(nums.length == <span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> Math.min(nums[<span class="number">0</span>],nums[<span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(l &lt; r)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid] &gt;= nums[l])&#123;<span class="comment">//1.'=' is very important since 2</span></span><br><span class="line">                l = mid + <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(nums[l] &lt; nums[mid])&#123;<span class="comment">//2.this can make sure that l is never bigger than the result</span></span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                r = mid;<span class="comment">//3.this will make sure r is closer and closer to the result</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">     <span class="keyword">return</span> Math.min(nums[l],nums[<span class="number">0</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
           
@@ -1087,7 +729,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/08/113-Path-Sum-II/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/149-Max-Points-on-a-Line/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -1107,7 +749,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/08/113-Path-Sum-II/" class="post-title-link" itemprop="url">113. Path Sum II</a>
+                <a href="/2019/09/19/149-Max-Points-on-a-Line/" class="post-title-link" itemprop="url">149. Max Points on a Line</a>
               
             
           </h1>
@@ -1132,7 +774,7 @@
                 
               
 
-              <time title="创建于：2019-07-08 20:35:15 / 更新于：20:37:02" itemprop="dateCreated datePublished" datetime="2019-07-08T20:35:15+08:00">2019-07-08</time>
+              <time title="创建于：2019-09-19 10:06:32 / 更新于：10:13:17" itemprop="dateCreated datePublished" datetime="2019-09-19T10:06:32+08:00">2019-09-19</time>
             
 
             
@@ -1191,17 +833,716 @@
       
         
           
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a binary tree and a sum, find all root-to-leaf paths where each path’s sum equals the given sum.</p>
-<p><strong>Note:</strong> A leaf is a node with no children.</p>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given <em>n</em> points on a 2D plane, find the maximum number of points that lie on the same straight line.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Input: [[1,1],[2,2],[3,3]]</span><br><span class="line">Output: 3</span><br><span class="line">Explanation:</span><br><span class="line">^</span><br><span class="line">|</span><br><span class="line">|        o</span><br><span class="line">|     o</span><br><span class="line">|  o  </span><br><span class="line">+-------------&gt;</span><br><span class="line">0  1  2  3  4</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>Smart way to get and record the slope,even the slope is 0 or infinite.</p>
+<p>Just traverse all possible lines.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxPoints</span><span class="params">(<span class="keyword">int</span>[][] points)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(points.length == <span class="number">0</span> || points.length == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> points.length;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; points.length;i++)&#123;</span><br><span class="line">            Map&lt;String,Integer&gt;map = <span class="keyword">new</span> HashMap();</span><br><span class="line">            <span class="keyword">int</span> supp = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> lmax = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i + <span class="number">1</span>;j &lt; points.length;j++)&#123;</span><br><span class="line">                <span class="keyword">int</span> x = points[j][<span class="number">0</span>] - points[i][<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">int</span> y = points[j][<span class="number">1</span>] - points[i][<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">if</span>(x == <span class="number">0</span> &amp;&amp; y == <span class="number">0</span>)&#123;</span><br><span class="line">                    supp++;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">int</span> gcd = getGcd(x,y);</span><br><span class="line">                x /= gcd;</span><br><span class="line">                y /= gcd;</span><br><span class="line">                String slope = String.valueOf(y) + <span class="string">"/"</span> + String.valueOf(x);</span><br><span class="line">                <span class="keyword">int</span> cnt = map.getOrDefault(slope,<span class="number">0</span>);</span><br><span class="line">                cnt++;</span><br><span class="line">                map.put(slope,cnt);</span><br><span class="line">                lmax = Math.max(lmax,cnt);</span><br><span class="line">            &#125;</span><br><span class="line">            res = Math.max(res,lmax + supp + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getGcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> b == <span class="number">0</span> ? a : getGcd(b,a % b); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+      
+    </div>
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+      </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/150-Evaluate-Reverse-Polish-Notation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="博主">
+      <meta itemprop="description" content="Trip Of Learning Code">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coding Park">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/09/19/150-Evaluate-Reverse-Polish-Notation/" class="post-title-link" itemprop="url">150. Evaluate Reverse Polish Notation</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建于：2019-09-19 10:00:37 / 更新于：10:05:12" itemprop="dateCreated datePublished" datetime="2019-09-19T10:00:37+08:00">2019-09-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Evaluate the value of an arithmetic expression in <a href="http://en.wikipedia.org/wiki/Reverse_Polish_notation" target="_blank" rel="noopener">Reverse Polish Notation</a>.</p>
+<p>Valid operators are <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>. Each operand may be an integer or another expression.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Division between two integers should truncate toward zero.</li>
+<li>The given RPN expression is always valid. That means the expression would always evaluate to a result and there won’t be any divide by zero operation.</li>
+</ul>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: ["2", "1", "+", "3", "*"]</span><br><span class="line">Output: 9</span><br><span class="line">Explanation: ((2 + 1) * 3) = 9</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> index;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">evalRPN</span><span class="params">(String[] tokens)</span> </span>&#123;</span><br><span class="line">        index = tokens.length;</span><br><span class="line">        <span class="keyword">return</span> dfs(tokens);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">dfs</span><span class="params">(String []tokens)</span></span>&#123;</span><br><span class="line">        index--;</span><br><span class="line">       <span class="comment">// System.out.print("index = " + tokens[index] + " ============== ");</span></span><br><span class="line">        <span class="keyword">if</span>(tokens[index].equals(<span class="string">"+"</span>) || tokens[index].equals(<span class="string">"-"</span>) || tokens[index].equals(<span class="string">"*"</span>) || tokens[index].equals(<span class="string">"/"</span>))&#123;</span><br><span class="line">          <span class="comment">//  System.out.println("*******************************");</span></span><br><span class="line">            <span class="keyword">if</span>(tokens[index].equals(<span class="string">"+"</span>))&#123;</span><br><span class="line">                <span class="keyword">int</span> op1 = dfs(tokens);</span><br><span class="line">                <span class="keyword">int</span> op2 = dfs(tokens);</span><br><span class="line">                <span class="keyword">return</span> op2 + op1;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(tokens[index].equals(<span class="string">"-"</span>))&#123;</span><br><span class="line">                <span class="keyword">int</span> op1 = dfs(tokens);</span><br><span class="line">                <span class="keyword">int</span> op2 = dfs(tokens);</span><br><span class="line">                <span class="keyword">return</span> op2 - op1;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(tokens[index].equals(<span class="string">"*"</span>))&#123;</span><br><span class="line">                <span class="keyword">int</span> op1 = dfs(tokens);</span><br><span class="line">                <span class="keyword">int</span> op2 = dfs(tokens);</span><br><span class="line">                  </span><br><span class="line">                <span class="keyword">return</span> op2 * op1;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(tokens[index].equals(<span class="string">"/"</span>))&#123;</span><br><span class="line">                <span class="keyword">int</span> op1 = dfs(tokens);</span><br><span class="line">                <span class="keyword">int</span> op2 = dfs(tokens);</span><br><span class="line">                <span class="keyword">return</span> op2 / op1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">     <span class="comment">//   System.out.print( tokens[index]);</span></span><br><span class="line">         <span class="keyword">return</span> Integer.parseInt(tokens[index]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+      
+    </div>
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+      </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/147-Insertion-Sort-List/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="博主">
+      <meta itemprop="description" content="Trip Of Learning Code">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coding Park">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/09/19/147-Insertion-Sort-List/" class="post-title-link" itemprop="url">147. Insertion Sort List</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建于：2019-09-19 09:55:28 / 更新于：09:59:32" itemprop="dateCreated datePublished" datetime="2019-09-19T09:55:28+08:00">2019-09-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Sort a linked list using insertion sort.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" alt="img"></p>
+<p>A graphical example of insertion sort. The partial sorted list (black) initially contains only the first element in the list.<br>With each iteration one element (red) is removed from the input data and inserted in-place into the sorted list</p>
+<p><strong>Algorithm of Insertion Sort:</strong></p>
+<ol>
+<li>Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list.</li>
+<li>At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there.</li>
+<li>It repeats until no input elements remain.</li>
+</ol>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 4-&gt;2-&gt;1-&gt;3</span><br><span class="line">Output: 1-&gt;2-&gt;3-&gt;4</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>if the node is at the right position,then don’t move it</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">insertionSortList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode sort = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode node = head;</span><br><span class="line">        sort.next = node;</span><br><span class="line">        node = node.next;</span><br><span class="line">        sort.next.next = <span class="keyword">null</span>;</span><br><span class="line">        ListNode last = sort.next;</span><br><span class="line">        <span class="keyword">while</span>(node != <span class="keyword">null</span>)&#123;</span><br><span class="line">            ListNode temp = node;</span><br><span class="line">            node = node.next;</span><br><span class="line">            <span class="keyword">if</span>(temp.val &gt; last.val)&#123;</span><br><span class="line">                last.next = temp;</span><br><span class="line">                temp.next = <span class="keyword">null</span>;</span><br><span class="line">                last = temp;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            ListNode run = sort;</span><br><span class="line">            <span class="keyword">while</span>(run.next != <span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(run.next.val &gt;= temp.val)&#123;</span><br><span class="line">                    temp.next = run.next;</span><br><span class="line">                    run.next = temp;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                run = run.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(run.next == <span class="keyword">null</span>)&#123;</span><br><span class="line">                run.next = temp;</span><br><span class="line">                temp.next = <span class="keyword">null</span>;</span><br><span class="line">                last = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sort.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+      
+    </div>
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+      </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/17/143-Reorder-List/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="博主">
+      <meta itemprop="description" content="Trip Of Learning Code">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coding Park">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/09/17/143-Reorder-List/" class="post-title-link" itemprop="url">143. Reorder List</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建于：2019-09-17 08:43:40 / 更新于：08:46:31" itemprop="dateCreated datePublished" datetime="2019-09-17T08:43:40+08:00">2019-09-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a singly linked list <em>L</em>: <em>L</em>0→<em>L</em>1→…→<em>L**n</em>-1→<em>L</em>n,<br>reorder it to: <em>L</em>0→<em>L**n</em>→<em>L</em>1→<em>L**n</em>-1→<em>L</em>2→<em>L**n</em>-2→…</p>
+<p>You may <strong>not</strong> modify the values in the list’s nodes, only nodes itself may be changed.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">reorderList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> flag = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode node = head;</span><br><span class="line">        ListNode link2 ;</span><br><span class="line">        ListNode quick = head.next;</span><br><span class="line">        <span class="keyword">while</span>(quick != <span class="keyword">null</span> &amp;&amp; quick.next != <span class="keyword">null</span>)&#123;<span class="comment">//easy way to get the middle of linkedlist,middle = (len + 1) / 2</span></span><br><span class="line">            node = node.next;</span><br><span class="line">            quick = quick.next.next;</span><br><span class="line">        &#125;</span><br><span class="line">        link2 = node.next;</span><br><span class="line">        node.next = <span class="keyword">null</span>;</span><br><span class="line">        ListNode link3 = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode pre = link2;</span><br><span class="line">        link3.next = link2;</span><br><span class="line">        link2 = link2.next;</span><br><span class="line">        <span class="keyword">while</span>(link2 != <span class="keyword">null</span>)&#123;<span class="comment">//reverse the latter half of the linked list</span></span><br><span class="line">           pre.next = link2.next;</span><br><span class="line">            link2.next = link3.next;</span><br><span class="line">            link3.next = link2;</span><br><span class="line">            link2 = pre.next;</span><br><span class="line">        &#125;</span><br><span class="line">        node = head;</span><br><span class="line">        link3 = link3.next;</span><br><span class="line">        <span class="keyword">while</span>(node != <span class="keyword">null</span> &amp;&amp; link3 != <span class="keyword">null</span>)&#123;</span><br><span class="line">            ListNode next1 = node.next;</span><br><span class="line">            ListNode next2 = link3.next;</span><br><span class="line">            </span><br><span class="line">            link3.next = node.next;</span><br><span class="line">            node.next = link3;</span><br><span class="line">            </span><br><span class="line">            node = next1;</span><br><span class="line">            link3 = next2;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+      
+    </div>
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+      </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/17/145-Binary-Tree-Postorder-Traversal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="博主">
+      <meta itemprop="description" content="Trip Of Learning Code">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coding Park">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/09/17/145-Binary-Tree-Postorder-Traversal/" class="post-title-link" itemprop="url">145. Binary Tree Postorder Traversal</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建于：2019-09-17 08:39:46 / 更新于：08:42:32" itemprop="dateCreated datePublished" datetime="2019-09-17T08:39:46+08:00">2019-09-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a binary tree, return the <em>postorder</em> traversal of its nodes’ values.</p>
 <p><strong>Example:</strong></p>
-<p>Given the below binary tree and <code>sum = 22</code>,</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   5</span><br><span class="line">     / \</span><br><span class="line">    4   8</span><br><span class="line">   /   / \</span><br><span class="line">  11  13  4</span><br><span class="line"> /  \    / \</span><br><span class="line">7    2  5   1</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,null,2,3]</span><br><span class="line">   1</span><br><span class="line">    \</span><br><span class="line">     2</span><br><span class="line">    /</span><br><span class="line">   3</span><br><span class="line"></span><br><span class="line">Output: [3,2,1]</span><br></pre></td></tr></table></figure>
 
-<p>Return:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">   [5,4,11,2],</span><br><span class="line">   [5,8,4,5]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        LinkedList&lt;Integer&gt;res = <span class="keyword">new</span> LinkedList();</span><br><span class="line">        Stack&lt;TreeNode&gt;stack = <span class="keyword">new</span> Stack();</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        stack.push(root);</span><br><span class="line">        TreeNode node = root.right;</span><br><span class="line">        res.addFirst(root.val);</span><br><span class="line">        <span class="keyword">while</span>(node != <span class="keyword">null</span> || !stack.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">if</span>(node != <span class="keyword">null</span>)&#123;</span><br><span class="line">                res.addFirst(node.val);</span><br><span class="line">                stack.push(node);</span><br><span class="line">                node = node.right;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                node = stack.pop().left;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>Just read the code.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt;ans = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">findPath</span><span class="params">(TreeNode rt,<span class="keyword">int</span> sumNow,List&lt;Integer&gt;res,<span class="keyword">int</span> sum)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(rt == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span>(rt.left == <span class="keyword">null</span> &amp;&amp; rt.right == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(sumNow + rt.val == sum)&#123;</span><br><span class="line">                List&lt;Integer&gt;st = <span class="keyword">new</span> ArrayList(res);</span><br><span class="line">                st.add(rt.val);</span><br><span class="line">                ans.add(st);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">     <span class="comment">//   if(sumNow + rt.val &gt; sum) return;</span></span><br><span class="line">      </span><br><span class="line">        res.add(rt.val);</span><br><span class="line">        <span class="keyword">if</span>(rt.left != <span class="keyword">null</span>) findPath(rt.left,sumNow + rt.val,res,sum);</span><br><span class="line">        <span class="keyword">if</span>(rt.right != <span class="keyword">null</span>) findPath(rt.right,sumNow + rt.val,res,sum);</span><br><span class="line">        res.remove(res.size() - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; pathSum(TreeNode root, <span class="keyword">int</span> sum) &#123;</span><br><span class="line">        findPath(root,<span class="number">0</span>,<span class="keyword">new</span> ArrayList&lt;Integer&gt;(),sum);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>And I  want to add the in order traverse.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">inorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    Deque&lt;TreeNode&gt; stack = <span class="keyword">new</span> ArrayDeque&lt;&gt;();</span><br><span class="line">    TreeNode p = root;</span><br><span class="line">    <span class="keyword">while</span>(!stack.isEmpty() || p != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(p != <span class="keyword">null</span>) &#123;</span><br><span class="line">            stack.push(p);</span><br><span class="line">            p = p.left;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            TreeNode node = stack.pop();</span><br><span class="line">            result.add(node.val);  <span class="comment">// Add after all left children</span></span><br><span class="line">            p = node.right;   </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
           
@@ -1264,7 +1605,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/08/109-Convert-Sorted-List-to-Binary-Search-Tree/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/17/144-Binary-Tree-Preorder-Traversal/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -1284,7 +1625,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/08/109-Convert-Sorted-List-to-Binary-Search-Tree/" class="post-title-link" itemprop="url">109. Convert Sorted List to Binary Search Tree</a>
+                <a href="/2019/09/17/144-Binary-Tree-Preorder-Traversal/" class="post-title-link" itemprop="url">144. Binary Tree Preorder Traversal</a>
               
             
           </h1>
@@ -1309,7 +1650,7 @@
                 
               
 
-              <time title="创建于：2019-07-08 20:32:01 / 更新于：20:34:36" itemprop="dateCreated datePublished" datetime="2019-07-08T20:32:01+08:00">2019-07-08</time>
+              <time title="创建于：2019-09-17 08:37:44 / 更新于：08:39:25" itemprop="dateCreated datePublished" datetime="2019-09-17T08:37:44+08:00">2019-09-17</time>
             
 
             
@@ -1368,189 +1709,11 @@
       
         
           
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.</p>
-<p>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of <em>every</em> node never differ by more than 1.</p>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a binary tree, return the <em>preorder</em> traversal of its nodes’ values.</p>
 <p><strong>Example:</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Given the sorted linked list: [-10,-3,0,5,9],</span><br><span class="line"></span><br><span class="line">One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:</span><br><span class="line"></span><br><span class="line">      0</span><br><span class="line">     / \</span><br><span class="line">   -3   9</span><br><span class="line">   /   /</span><br><span class="line"> -10  5</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,null,2,3]</span><br><span class="line">   1</span><br><span class="line">    \</span><br><span class="line">     2</span><br><span class="line">    /</span><br><span class="line">   3</span><br><span class="line"></span><br><span class="line">Output: [1,2,3]</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>Set the mid of every subsequence as the root of every subtree.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">makeTree</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,Integer []ans)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l == r) <span class="keyword">return</span> <span class="keyword">new</span> TreeNode(ans[l]);</span><br><span class="line">        <span class="keyword">if</span>(l &gt; r) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">int</span> index = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        TreeNode rt = <span class="keyword">new</span> TreeNode(ans[index]);</span><br><span class="line">        rt.left = makeTree(l,index - <span class="number">1</span>,ans);</span><br><span class="line">        rt.right = makeTree(index + <span class="number">1</span>,r,ans);</span><br><span class="line">        <span class="keyword">return</span> rt;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">sortedListToBST</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode node = head;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        ArrayList&lt;Integer&gt; ans = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        <span class="keyword">while</span>(node != <span class="keyword">null</span>)&#123;</span><br><span class="line">            ans.add(node.val);</span><br><span class="line">            node = node.next;</span><br><span class="line">        &#125;</span><br><span class="line">        Integer []num =ans.toArray(<span class="keyword">new</span> Integer[ans.size()]);</span><br><span class="line">        <span class="keyword">return</span>   makeTree(<span class="number">0</span>,ans.size() - <span class="number">1</span>,num);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-      
-    </div>
-    
-
-    
-      
-    
-    
-
-    
-      <div>
-        
-      </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/06/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="Trip Of Learning Code">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Coding Park">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/06/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal/" class="post-title-link" itemprop="url">106. Construct Binary Tree from Inorder and Postorder Traversal</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2019-07-06 21:50:40 / 更新于：21:53:11" itemprop="dateCreated datePublished" datetime="2019-07-06T21:50:40+08:00">2019-07-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given inorder and postorder traversal of a tree, construct the binary tree.</p>
-<p><strong>Note:</strong><br>You may assume that duplicates do not exist in the tree.</p>
-<p>For example, given</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">inorder = [9,3,15,20,7]</span><br><span class="line">postorder = [9,15,7,20,3]</span><br></pre></td></tr></table></figure>
-
-<p>Return the following binary tree:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  3</span><br><span class="line"> / \</span><br><span class="line">9  20</span><br><span class="line">  /  \</span><br><span class="line"> 15   7</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>We can find the root of every subtree and do it recursively</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    Map&lt;Integer,Integer&gt;map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">makeTree</span><span class="params">(<span class="keyword">int</span> []inorder,<span class="keyword">int</span> []postorder,<span class="keyword">int</span> li,<span class="keyword">int</span> ri,<span class="keyword">int</span> lp,<span class="keyword">int</span> rp)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(li &gt; ri || lp &gt; rp) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">if</span>(li == ri || lp == rp) <span class="keyword">return</span> <span class="keyword">new</span> TreeNode(inorder[li]);</span><br><span class="line">        TreeNode rt = <span class="keyword">new</span> TreeNode(postorder[rp]);</span><br><span class="line">        <span class="keyword">int</span> index = map.get(postorder[rp]);</span><br><span class="line">        rt.left = makeTree(inorder,postorder,li,index - <span class="number">1</span>,lp,lp + index - li - <span class="number">1</span>);</span><br><span class="line">        rt.right = makeTree(inorder,postorder,index + <span class="number">1</span>,ri,lp + index - li,rp - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> rt;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">buildTree</span><span class="params">(<span class="keyword">int</span>[] inorder, <span class="keyword">int</span>[] postorder)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; inorder.length;i++) map.put(inorder[i],i);</span><br><span class="line">        <span class="keyword">return</span> makeTree(inorder,postorder,<span class="number">0</span>,inorder.length - <span class="number">1</span>,<span class="number">0</span>,postorder.length - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">preorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        Stack&lt;TreeNode&gt;stack = <span class="keyword">new</span> Stack&lt;TreeNode&gt;();</span><br><span class="line">        List&lt;Integer&gt;res = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        res.add(root.val);</span><br><span class="line">        stack.push(root);</span><br><span class="line">        TreeNode node = root.left;</span><br><span class="line">        <span class="keyword">while</span>(node != <span class="keyword">null</span> || !stack.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">if</span>(node != <span class="keyword">null</span>)&#123;</span><br><span class="line">                res.add(node.val);</span><br><span class="line">                stack.push(node);</span><br><span class="line">                node = node.left;     </span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                node = stack.pop().right;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
           
@@ -1613,7 +1776,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/16/140-Word-Break-II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -1633,7 +1796,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/" class="post-title-link" itemprop="url">103. Binary Tree Zigzag Level Order Traversal</a>
+                <a href="/2019/09/16/140-Word-Break-II/" class="post-title-link" itemprop="url">140. Word Break II</a>
               
             
           </h1>
@@ -1658,182 +1821,7 @@
                 
               
 
-              <time title="创建于：2019-07-06 21:47:38 / 更新于：21:49:55" itemprop="dateCreated datePublished" datetime="2019-07-06T21:47:38+08:00">2019-07-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a binary tree, return the <em>zigzag level order</em> traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between).</p>
-<p>For example:<br>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  3</span><br><span class="line"> / \</span><br><span class="line">9  20</span><br><span class="line">  /  \</span><br><span class="line"> 15   7</span><br></pre></td></tr></table></figure>
-
-<p>return its zigzag level order traversal as:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [3],</span><br><span class="line">  [20,9],</span><br><span class="line">  [15,7]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>just read the code</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt;ans = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        Stack&lt;TreeNode&gt;sta1 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        Stack&lt;TreeNode&gt;sta2 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> mk = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        sta1.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!sta1.isEmpty() || !sta2.isEmpty())&#123;</span><br><span class="line">            List&lt;Integer&gt;res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            <span class="keyword">if</span>(mk == <span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">while</span>(!sta1.isEmpty())&#123;</span><br><span class="line">                    TreeNode st = sta1.pop();</span><br><span class="line">                    res.add(st.val);</span><br><span class="line">                    <span class="keyword">if</span>(st.left != <span class="keyword">null</span>) sta2.push(st.left);</span><br><span class="line">                    <span class="keyword">if</span>(st.right != <span class="keyword">null</span>) sta2.push(st.right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">while</span>(!sta2.isEmpty())&#123;</span><br><span class="line">                    TreeNode st = sta2.pop();</span><br><span class="line">                    res.add(st.val);</span><br><span class="line">                    <span class="keyword">if</span>(st.right != <span class="keyword">null</span>) sta1.push(st.right);</span><br><span class="line">                    <span class="keyword">if</span>(st.left != <span class="keyword">null</span>) sta1.push(st.left);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            mk ^= <span class="number">1</span>;</span><br><span class="line">            ans.add(<span class="keyword">new</span> ArrayList(res));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-      
-    </div>
-    
-
-    
-      
-    
-    
-
-    
-      <div>
-        
-      </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/05/99-Recover-Binary-Search-Tree/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="Trip Of Learning Code">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Coding Park">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/05/99-Recover-Binary-Search-Tree/" class="post-title-link" itemprop="url">99. Recover Binary Search Tree</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2019-07-05 21:41:03" itemprop="dateCreated datePublished" datetime="2019-07-05T21:41:03+08:00">2019-07-05</time>
+              <time title="创建于：2019-09-16 14:53:40" itemprop="dateCreated datePublished" datetime="2019-09-16T14:53:40+08:00">2019-09-16</time>
             
 
             
@@ -1850,7 +1838,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="更新于：2019-07-06 11:44:16" itemprop="dateModified" datetime="2019-07-06T11:44:16+08:00">2019-07-06</time>
+                <time title="更新于：2019-09-17 08:36:34" itemprop="dateModified" datetime="2019-09-17T08:36:34+08:00">2019-09-17</time>
               
             
           </span>
@@ -1904,28 +1892,20 @@
       
         
           
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Two elements of a binary search tree (BST) are swapped by mistake.</p>
-<p>Recover the tree without changing its structure.</p>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a <strong>non-empty</strong> string <em>s</em> and a dictionary <em>wordDict</em> containing a list of <strong>non-empty</strong> words, add spaces in <em>s</em> to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>The same word in the dictionary may be reused multiple times in the segmentation.</li>
+<li>You may assume the dictionary does not contain duplicate words.</li>
+</ul>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,3,null,null,2]</span><br><span class="line"></span><br><span class="line">   1</span><br><span class="line">  /</span><br><span class="line"> 3</span><br><span class="line">  \</span><br><span class="line">   2</span><br><span class="line"></span><br><span class="line">Output: [3,1,null,null,2]</span><br><span class="line"></span><br><span class="line">   3</span><br><span class="line">  /</span><br><span class="line"> 1</span><br><span class="line">  \</span><br><span class="line">   2</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">s = "catsanddog"</span><br><span class="line">wordDict = ["cat", "cats", "and", "sand", "dog"]</span><br><span class="line">Output:</span><br><span class="line">[</span><br><span class="line">  "cats and dog",</span><br><span class="line">  "cat sand dog"</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>It is not so difficult to use recursion to solve this problem.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> TreeNode back = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">public</span> TreeNode big = <span class="keyword">new</span> TreeNode(Integer.MAX_VALUE);</span><br><span class="line">    <span class="keyword">public</span> TreeNode  small = <span class="keyword">new</span> TreeNode(Integer.MAX_VALUE);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> flag;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">midTree</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root.left != <span class="keyword">null</span>) midTree(root.left);</span><br><span class="line">        <span class="keyword">if</span>( back == <span class="keyword">null</span> || back.val &lt; root.val ) back = root;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(flag == <span class="number">0</span>)&#123;</span><br><span class="line">                big = back;</span><br><span class="line">                <span class="comment">//System.out.println(back.val);</span></span><br><span class="line">                flag = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(flag == <span class="number">1</span>)&#123;</span><br><span class="line">                small = root;</span><br><span class="line">               <span class="comment">// System.out.println(small.val);</span></span><br><span class="line">            &#125;</span><br><span class="line">            back = root;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(root.right != <span class="keyword">null</span>) midTree(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">recoverTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        midTree(root);</span><br><span class="line">        <span class="keyword">if</span>(small.val == Integer.MAX_VALUE) small = back;</span><br><span class="line">        <span class="keyword">int</span> temp = big.val;</span><br><span class="line">        big.val = small.val;</span><br><span class="line">        small.val = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>Use memorized search to save time.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">wordBreak</span><span class="params">(String s, List&lt;String&gt; wordDict)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> dfs(s,<span class="keyword">new</span> HashMap&lt;String,List&lt;String&gt;&gt;(),wordDict);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">dfs</span><span class="params">(String 		       s,Map&lt;String,List&lt;String&gt;&gt;map,List&lt;String&gt;wordDict)</span></span>&#123;</span><br><span class="line">        List&lt;String&gt;res = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        <span class="keyword">if</span>(s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(map.containsKey(s))&#123;</span><br><span class="line">            <span class="keyword">return</span> map.get(s);</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">for</span>(String word : wordDict)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s.startsWith(word))&#123;</span><br><span class="line">                <span class="keyword">if</span>(word.length() == s.length())&#123;</span><br><span class="line">                    res.add(word);</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                List&lt;String&gt;tmp = dfs(s.substring(word.length()),map,wordDict);<span class="comment">//memorized search</span></span><br><span class="line">                <span class="keyword">if</span>(tmp.size() == <span class="number">0</span>)&#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">for</span>(String tt : tmp)&#123;</span><br><span class="line">                        res.add(word + <span class="string">" "</span>  + tt);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        map.put(s,res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>But the solution used O(n) space,we need to use Morris Threading Traversal.</p>
-<p>线索二叉树也就是根据二叉树中空闲的指针，指向某序遍历的后继节点，在在此题中也就是中序遍历的后续节点。</p>
-<p>从而能够不递归而中序遍历二叉树。</p>
-<p>步骤为：</p>
-<p>1.若当前节点没有左子树，则输出当前节点，并将当前节点的右孩子作为当前节点，再重复1步骤；</p>
-<p>若当前节点有左子树则转至2；</p>
-<p>若当前节点为空则遍历结束</p>
-<p>2.当前节点有左子树，则首先寻找在中序遍历时当前节点的前驱节点：</p>
-<p> 2.1若前驱节点的右子树为空，则将前驱节点的右指针指向当前节点，并将当前节点的左孩子设为当前节点，转至步骤1</p>
-<p>2.2 若前驱节点的右孩子为当前节点，说明当前节点已经和前驱节点连接过并且当前节点的左子树已经遍历完成，则此时输出当前节点，将前驱节点的右指针重新设为空，并将当前节点的右孩子设为当前节点，转至步骤1</p>
-<p>参考自</p>
-<p>[<a href="https://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html]" target="_blank" rel="noopener">https://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html]</a>: </p>
-<p>代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> TreeNode pre = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">public</span> TreeNode big = <span class="keyword">new</span> TreeNode(Integer.MAX_VALUE);</span><br><span class="line">    <span class="keyword">public</span> TreeNode  small = <span class="keyword">new</span> TreeNode(Integer.MAX_VALUE);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> flag;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">recoverTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(root != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(root.left == <span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(pre == <span class="keyword">null</span>) pre = root;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(flag == <span class="number">0</span> &amp;&amp; pre.val &gt; root.val)&#123;</span><br><span class="line">                    big = pre;</span><br><span class="line">                    flag = <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(flag == <span class="number">1</span> &amp;&amp; pre.val &gt; root.val) small = root;</span><br><span class="line">                pre = root;</span><br><span class="line">                <span class="comment">//System.out.println(root.val + "  left");</span></span><br><span class="line">                root = root.right;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                TreeNode st = root.left;</span><br><span class="line">                <span class="keyword">while</span>(st.right != <span class="keyword">null</span> &amp;&amp; st.right != root) st = st.right;</span><br><span class="line">                <span class="keyword">if</span>(st.right == <span class="keyword">null</span>)&#123;</span><br><span class="line">                    st.right = root;</span><br><span class="line">                    root = root.left;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    st.right = <span class="keyword">null</span>;</span><br><span class="line">                    <span class="keyword">if</span>(pre == <span class="keyword">null</span>) pre = root;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>(flag == <span class="number">0</span> &amp;&amp; pre.val &gt; root.val)&#123;</span><br><span class="line">                    big = pre;</span><br><span class="line">                    flag = <span class="number">1</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                <span class="keyword">if</span>(flag == <span class="number">1</span> &amp;&amp; pre.val &gt; root.val) small = root;</span><br><span class="line">                pre = root;</span><br><span class="line">                  <span class="comment">//  System.out.println(root.val + "   right");</span></span><br><span class="line">                root = root.right;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> temp = small.val;</span><br><span class="line">        small.val = big.val;</span><br><span class="line">        big.val = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>But honestly,I can’t see why dp is TLE.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">wordBreak</span><span class="params">(String s, List&lt;String&gt; wordDict)</span> </span>&#123;</span><br><span class="line">        Map&lt;Integer,ArrayList&lt;ArrayList&lt;Integer&gt;&gt;&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i - <span class="number">1</span>; j &gt;= -<span class="number">1</span>;j--)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j == -<span class="number">1</span>)&#123;</span><br><span class="line">                    <span class="keyword">int</span> pos = wordDict.indexOf(s.substring(<span class="number">0</span>,i + <span class="number">1</span>));</span><br><span class="line">                    <span class="keyword">if</span>(pos != -<span class="number">1</span>)&#123;</span><br><span class="line">                        <span class="keyword">if</span>(!map.containsKey(i))&#123;</span><br><span class="line">                            map.put(i,<span class="keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt;());</span><br><span class="line">                        &#125;</span><br><span class="line">                        ArrayList&lt;Integer&gt; tmpList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">                        tmpList.add(pos);</span><br><span class="line">                        map.get(i).add(tmpList);</span><br><span class="line">                       <span class="comment">// System.out.println(s.substring(0,i + 1) + ":   " + tmpList);</span></span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(map.containsKey(j))&#123;<span class="comment">//if s[0~j] can be consisted by words from wordDict,then try s[j+1,i]</span></span><br><span class="line">                    <span class="keyword">int</span> pos = wordDict.indexOf(s.substring(j + <span class="number">1</span>,i + <span class="number">1</span>));</span><br><span class="line">                    <span class="keyword">if</span>(pos != -<span class="number">1</span>)&#123;</span><br><span class="line">                        <span class="keyword">if</span>(!map.containsKey(i))&#123;</span><br><span class="line">                            map.put(i,<span class="keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt;());</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="comment">//System.out.println(s.substring(0,j+1) + " =============================== ");</span></span><br><span class="line">                        <span class="keyword">for</span>(ArrayList &lt;Integer&gt; tmp : map.get(j))&#123;</span><br><span class="line">                            ArrayList&lt;Integer&gt;tmpNew = <span class="keyword">new</span> ArrayList&lt;&gt;(tmp);</span><br><span class="line">                            tmpNew.add(pos);</span><br><span class="line">                            map.get(i).add(<span class="keyword">new</span> ArrayList(tmpNew));</span><br><span class="line">                           <span class="comment">// System.out.println(s.substring(0,i+1) + ":  " + tmp);</span></span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">       <span class="comment">// System.out.println(s.substring(0,4) + ":   " + map.get(3));</span></span><br><span class="line">       <span class="comment">// System.out.println(s.substring(0,9) + ":   " + map.get(8));</span></span><br><span class="line">        List&lt;String&gt;res = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        <span class="keyword">if</span>(map.get(s.length() - <span class="number">1</span>) != <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">for</span>(List&lt;Integer&gt;tmp : map.get(s.length() - <span class="number">1</span>))&#123;</span><br><span class="line">                StringBuilder str = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; tmp.size();i++)&#123;</span><br><span class="line">                    str.append(wordDict.get(tmp.get(i)));</span><br><span class="line">                    <span class="keyword">if</span>(i != tmp.size() - <span class="number">1</span>)&#123;</span><br><span class="line">                        str.append(<span class="string">" "</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                res.add(str.toString());</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
           
@@ -1988,7 +1968,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/05/97-Interleaving-String/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/15/139-Word-Break/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="博主">
@@ -2008,7 +1988,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/05/97-Interleaving-String/" class="post-title-link" itemprop="url">97. Interleaving String</a>
+                <a href="/2019/09/15/139-Word-Break/" class="post-title-link" itemprop="url">139. Word Break</a>
               
             
           </h1>
@@ -2033,12 +2013,24 @@
                 
               
 
-              <time title="创建于：2019-07-05 11:59:56 / 更新于：14:02:07" itemprop="dateCreated datePublished" datetime="2019-07-05T11:59:56+08:00">2019-07-05</time>
+              <time title="创建于：2019-09-15 20:05:56" itemprop="dateCreated datePublished" datetime="2019-09-15T20:05:56+08:00">2019-09-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="更新于：2019-09-16 14:53:09" itemprop="dateModified" datetime="2019-09-16T14:53:09+08:00">2019-09-16</time>
               
             
           </span>
@@ -2092,19 +2084,16 @@
       
         
           
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given <em>s1</em>, <em>s2</em>, <em>s3</em>, find whether <em>s3</em> is formed by the interleaving of <em>s1</em> and <em>s2</em>.</p>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Given a <strong>non-empty</strong> string <em>s</em> and a dictionary <em>wordDict</em> containing a list of <strong>non-empty</strong> words, determine if <em>s</em> can be segmented into a space-separated sequence of one or more dictionary words.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>The same word in the dictionary may be reused multiple times in the segmentation.</li>
+<li>You may assume the dictionary does not contain duplicate words.</li>
+</ul>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: s = "leetcode", wordDict = ["leet", "code"]</span><br><span class="line">Output: true</span><br><span class="line">Explanation: Return true because "leetcode" can be segmented as "leet code".</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution1"><a href="#Solution1" class="headerlink" title="Solution1:"></a>Solution1:</h2><p>It’s easy to consider using dp to solve this problem.We can assume dp[i][j]    as the result of s1[0–i-1],s2[0–j-1],s3[0–i + j - 1],and s1[i-1] or s2[j-1] must be the end of s3[0–i + j - 1] if dp[i][j] is true.Read the code for more details.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isInterleave</span><span class="params">(String s1, String s2, String s3)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() + s2.length() != s3.length()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(s3.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() == <span class="number">0</span>) <span class="keyword">return</span> s2.equals(s3);</span><br><span class="line">        <span class="keyword">if</span>(s2.length() == <span class="number">0</span>) <span class="keyword">return</span> s1.equals(s3);</span><br><span class="line">        <span class="keyword">boolean</span> [][]dp = <span class="keyword">new</span> <span class="keyword">boolean</span>[s1.length() + <span class="number">2</span>][s2.length() + <span class="number">2</span>];</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">1</span>] = s2.charAt(<span class="number">0</span>) == s3.charAt(<span class="number">0</span>) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">        dp[<span class="number">1</span>][<span class="number">0</span>] = s1.charAt(<span class="number">0</span>) == s3.charAt(<span class="number">0</span>) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;= s1.length();i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt;= s2.length();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i == <span class="number">0</span> &amp;&amp;j == <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">if</span>(i == <span class="number">0</span>)&#123;</span><br><span class="line">                    dp[i][j] = (dp[i][j - <span class="number">1</span>] &amp;&amp; (s2.charAt(j - <span class="number">1</span>) == s3.charAt(j - <span class="number">1</span>))) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(j == <span class="number">0</span>)&#123;</span><br><span class="line">                    dp[i][j] = (dp[i - <span class="number">1</span>][j] &amp;&amp; (s1.charAt(i - <span class="number">1</span>) == s3.charAt(i - <span class="number">1</span>))) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(dp[i - <span class="number">1</span>][j] &amp;&amp; s3.charAt(i + j - <span class="number">1</span>) == s1.charAt(i - <span class="number">1</span>)) dp[i][j] = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(dp[i][j - <span class="number">1</span>] &amp;&amp; s3.charAt(i + j - <span class="number">1</span>) == s2.charAt(j - <span class="number">1</span>)) dp[i][j] = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">else</span> dp[i][j] = <span class="keyword">false</span>;</span><br><span class="line">                <span class="comment">//System.out.println(i + " " + j + " " + dp[i][j]);</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[s1.length()][s2.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>And we can try using  1D Dynamic Programming,because we use dp[i][j-1] and dp[i-1][j] to update dp[i][j]  ,it can be saved in 1D</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isInterleave</span><span class="params">(String s1, String s2, String s3)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() + s2.length() != s3.length()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(s3.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() == <span class="number">0</span>) <span class="keyword">return</span> s2.equals(s3);</span><br><span class="line">        <span class="keyword">if</span>(s2.length() == <span class="number">0</span>) <span class="keyword">return</span> s1.equals(s3);</span><br><span class="line">        <span class="keyword">boolean</span> []dp = <span class="keyword">new</span> <span class="keyword">boolean</span>[s2.length() + <span class="number">2</span>];</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">char</span> []ss1 = s1.toCharArray();</span><br><span class="line">        <span class="keyword">char</span> []ss2 = s2.toCharArray();</span><br><span class="line">        <span class="keyword">char</span> []ss3 = s3.toCharArray();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;= s1.length();i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt;= s2.length();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i == <span class="number">0</span> &amp;&amp;j == <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">if</span>(i == <span class="number">0</span>)&#123;</span><br><span class="line">                    dp[j] = dp[j - <span class="number">1</span>] &amp;&amp; ss2[j - <span class="number">1</span>] == ss3[j - <span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(j == <span class="number">0</span>)&#123;</span><br><span class="line">                    dp[j] = dp[j] &amp;&amp; ss1[i - <span class="number">1</span>] == ss3[i - <span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(dp[j] &amp;&amp; ss3[i + j - <span class="number">1</span>] == ss1[i - <span class="number">1</span>]) dp[j] = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(dp[j - <span class="number">1</span>] &amp;&amp; ss3[i + j - <span class="number">1</span>] == ss2[j - <span class="number">1</span>]) dp[j] = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">else</span> dp[j] = <span class="keyword">false</span>;</span><br><span class="line">                <span class="comment">//System.out.println(i + " " + j + " " + dp[i][j]);</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[s2.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Slution2"><a href="#Slution2" class="headerlink" title="Slution2:"></a>Slution2:</h2><p>Memorized search is faster than dp,maybe because I used too much if…else in dp….</p>
-<p>Theory is basically the same as dp,just get the flag[][] in reversed order</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isInterleave</span><span class="params">(String s1, String s2, String s3)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() + s2.length() != s3.length()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(s3.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(s1.length() == <span class="number">0</span>) <span class="keyword">return</span> s2.equals(s3);</span><br><span class="line">        <span class="keyword">if</span>(s2.length() == <span class="number">0</span>) <span class="keyword">return</span> s1.equals(s3);</span><br><span class="line">        Boolean [][]flag = <span class="keyword">new</span> Boolean[s1.length() + <span class="number">3</span>][s2.length() + <span class="number">3</span>];</span><br><span class="line">        <span class="keyword">return</span> sol(s1.toCharArray(),s2.toCharArray(),s3.toCharArray(),<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,flag);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">sol</span><span class="params">(<span class="keyword">char</span> []s1,<span class="keyword">char</span> []s2,<span class="keyword">char</span> []s3,<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c,Boolean flag[][])</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(c == s3.length) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(flag[a][b] != <span class="keyword">null</span>) <span class="keyword">return</span> flag[a][b];</span><br><span class="line">        <span class="keyword">if</span>(a &lt; s1.length &amp;&amp; s1[a] == s3[c] &amp;&amp; sol(s1,s2,s3,a + <span class="number">1</span>,b,c + <span class="number">1</span>,flag))  flag[a][b] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(b &lt; s2.length &amp;&amp; s2[b] == s3[c] &amp;&amp; sol(s1,s2,s3,a,b + <span class="number">1</span>,c + <span class="number">1</span>,flag)) flag[a][b] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">else</span> flag[a][b] = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> flag[a][b];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">wordBreak</span><span class="params">(String s, List&lt;String&gt; wordDict)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> []dp = <span class="keyword">new</span> <span class="keyword">boolean</span> [s.length() + <span class="number">3</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i - <span class="number">1</span>;j &gt;= -<span class="number">1</span>;j--)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j == -<span class="number">1</span>)&#123;</span><br><span class="line">                    dp[i] = wordDict.contains(s.substring(<span class="number">0</span>,i + <span class="number">1</span>));</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(dp[j])&#123;<span class="comment">//if dp[j] =true &amp;&amp; wordDict.contains(s.substring(j + 1,i + 1)) then dp[i] =true</span></span><br><span class="line">                    dp[i] = wordDict.contains(s.substring(j + <span class="number">1</span>,i + <span class="number">1</span>));</span><br><span class="line">                    <span class="keyword">if</span>(dp[i])&#123;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[s.length() - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
           
@@ -2156,7 +2145,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Vorherige Seite"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Vorherige Seite"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
   </nav>
 
 
@@ -2200,7 +2189,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-count">49</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2270,7 +2259,33 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2374,7 +2389,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">Altogether : 8.6k words</span>
+  <span class="post-count">Altogether : 13.9k words</span>
 </div>
 
         

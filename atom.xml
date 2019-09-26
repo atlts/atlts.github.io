@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-11T13:04:25.067Z</updated>
+  <updated>2019-09-26T13:49:06.795Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,193 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>134. Gas Station</title>
-    <link href="http://yoursite.com/2019/09/11/134-Gas-Station/"/>
-    <id>http://yoursite.com/2019/09/11/134-Gas-Station/</id>
-    <published>2019-09-11T12:57:49.000Z</published>
-    <updated>2019-09-11T13:04:25.067Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;There are &lt;em&gt;N&lt;/em&gt; gas
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="Simulation" scheme="http://yoursite.com/tags/Simulation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>133. Clone Graph</title>
-    <link href="http://yoursite.com/2019/09/11/133-Clone-Graph/"/>
-    <id>http://yoursite.com/2019/09/11/133-Clone-Graph/</id>
-    <published>2019-09-11T12:52:51.000Z</published>
-    <updated>2019-09-11T12:57:19.667Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a reference of a node in
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="Graph Theory" scheme="http://yoursite.com/tags/Graph-Theory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>130. Surrounded Regions</title>
-    <link href="http://yoursite.com/2019/09/10/130-Surrounded-Regions/"/>
-    <id>http://yoursite.com/2019/09/10/130-Surrounded-Regions/</id>
-    <published>2019-09-09T17:25:41.000Z</published>
-    <updated>2019-09-09T17:27:32.072Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a 2D board containing
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="Dfs" scheme="http://yoursite.com/tags/Dfs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>132. Palindrome Partitioning II</title>
-    <link href="http://yoursite.com/2019/09/10/132-Palindrome-Partitioning-II/"/>
-    <id>http://yoursite.com/2019/09/10/132-Palindrome-Partitioning-II/</id>
-    <published>2019-09-09T17:16:04.000Z</published>
-    <updated>2019-09-09T17:28:07.673Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a string &lt;em&gt;s&lt;/em&gt;,
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="Dp" scheme="http://yoursite.com/tags/Dp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>131. Palindrome Partitioning</title>
-    <link href="http://yoursite.com/2019/09/10/131-Palindrome-Partitioning/"/>
-    <id>http://yoursite.com/2019/09/10/131-Palindrome-Partitioning/</id>
-    <published>2019-09-09T17:13:42.000Z</published>
-    <updated>2019-09-09T17:17:50.989Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a string &lt;em&gt;s&lt;/em&gt;,
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="dfs" scheme="http://yoursite.com/tags/dfs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>126. Word Ladder II</title>
-    <link href="http://yoursite.com/2019/09/06/126-Word-Ladder-II/"/>
-    <id>http://yoursite.com/2019/09/06/126-Word-Ladder-II/</id>
-    <published>2019-09-06T14:06:41.000Z</published>
-    <updated>2019-09-06T14:11:10.370Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given two words
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="bfs and dfs" scheme="http://yoursite.com/tags/bfs-and-dfs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>127. Word Ladder</title>
-    <link href="http://yoursite.com/2019/09/06/127-Word-Ladder/"/>
-    <id>http://yoursite.com/2019/09/06/127-Word-Ladder/</id>
-    <published>2019-09-06T13:57:54.000Z</published>
-    <updated>2019-09-06T14:07:11.678Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given two words
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="bfs" scheme="http://yoursite.com/tags/bfs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>123. Best Time to Buy and Sell Stock III</title>
-    <link href="http://yoursite.com/2019/07/20/123-Best-Time-to-Buy-and-Sell-Stock-III/"/>
-    <id>http://yoursite.com/2019/07/20/123-Best-Time-to-Buy-and-Sell-Stock-III/</id>
-    <published>2019-07-20T02:57:38.000Z</published>
-    <updated>2019-09-09T17:17:07.192Z</updated>
+    <title>188. Best Time to Buy and Sell Stock IV</title>
+    <link href="http://yoursite.com/2019/09/26/188-Best-Time-to-Buy-and-Sell-Stock-IV/"/>
+    <id>http://yoursite.com/2019/09/26/188-Best-Time-to-Buy-and-Sell-Stock-IV/</id>
+    <published>2019-09-26T13:42:53.000Z</published>
+    <updated>2019-09-26T13:49:06.795Z</updated>
     
     <summary type="html">
     
@@ -220,16 +38,16 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="Dp" scheme="http://yoursite.com/tags/Dp/"/>
+      <category term="DP" scheme="http://yoursite.com/tags/DP/"/>
     
   </entry>
   
   <entry>
-    <title>120. Triangle</title>
-    <link href="http://yoursite.com/2019/07/16/120-Triangle/"/>
-    <id>http://yoursite.com/2019/07/16/120-Triangle/</id>
-    <published>2019-07-16T02:24:52.000Z</published>
-    <updated>2019-09-09T17:17:12.118Z</updated>
+    <title>199. Binary Tree Right Side View</title>
+    <link href="http://yoursite.com/2019/09/26/199-Binary-Tree-Right-Side-View/"/>
+    <id>http://yoursite.com/2019/09/26/199-Binary-Tree-Right-Side-View/</id>
+    <published>2019-09-26T13:41:04.000Z</published>
+    <updated>2019-09-26T13:42:13.737Z</updated>
     
     <summary type="html">
     
@@ -237,7 +55,7 @@
       
         
         
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a triangle, find the
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a binary tree, imagine
         
       
     
@@ -246,16 +64,16 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="Dp" scheme="http://yoursite.com/tags/Dp/"/>
+      <category term="BFS" scheme="http://yoursite.com/tags/BFS/"/>
     
   </entry>
   
   <entry>
-    <title>117. Populating Next Right Pointers in Each Node II</title>
-    <link href="http://yoursite.com/2019/07/13/117-Populating-Next-Right-Pointers-in-Each-Node-II/"/>
-    <id>http://yoursite.com/2019/07/13/117-Populating-Next-Right-Pointers-in-Each-Node-II/</id>
-    <published>2019-07-13T01:45:22.000Z</published>
-    <updated>2019-07-13T01:54:44.803Z</updated>
+    <title>187. Repeated DNA Sequences</title>
+    <link href="http://yoursite.com/2019/09/26/187-Repeated-DNA-Sequences/"/>
+    <id>http://yoursite.com/2019/09/26/187-Repeated-DNA-Sequences/</id>
+    <published>2019-09-26T13:37:31.000Z</published>
+    <updated>2019-09-26T13:40:11.027Z</updated>
     
     <summary type="html">
     
@@ -263,8 +81,7 @@
       
         
         
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a binary tree&lt;/p&gt;
-&lt;figure
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;All DNA is composed of a series
         
       
     
@@ -273,16 +90,16 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="tree" scheme="http://yoursite.com/tags/tree/"/>
+      <category term="Bit Operation" scheme="http://yoursite.com/tags/Bit-Operation/"/>
     
   </entry>
   
   <entry>
-    <title>116. Populating Next Right Pointers in Each Node</title>
-    <link href="http://yoursite.com/2019/07/13/116-Populating-Next-Right-Pointers-in-Each-Node/"/>
-    <id>http://yoursite.com/2019/07/13/116-Populating-Next-Right-Pointers-in-Each-Node/</id>
-    <published>2019-07-13T01:41:05.000Z</published>
-    <updated>2019-07-13T01:56:39.848Z</updated>
+    <title>174. Dungeon Game</title>
+    <link href="http://yoursite.com/2019/09/25/174-Dungeon-Game/"/>
+    <id>http://yoursite.com/2019/09/25/174-Dungeon-Game/</id>
+    <published>2019-09-25T01:15:21.000Z</published>
+    <updated>2019-09-25T01:25:25.279Z</updated>
     
     <summary type="html">
     
@@ -290,33 +107,7 @@
       
         
         
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;You are given a &lt;strong&gt;perfect
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-      <category term="recursive" scheme="http://yoursite.com/tags/recursive/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>115. Distinct Subsequences</title>
-    <link href="http://yoursite.com/2019/07/12/115-Distinct-Subsequences/"/>
-    <id>http://yoursite.com/2019/07/12/115-Distinct-Subsequences/</id>
-    <published>2019-07-12T03:51:17.000Z</published>
-    <updated>2019-07-12T04:00:38.491Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a string
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;The demons had captured the
         
       
     
@@ -330,11 +121,11 @@
   </entry>
   
   <entry>
-    <title>114. Flatten Binary Tree to Linked List</title>
-    <link href="http://yoursite.com/2019/07/08/114-Flatten-Binary-Tree-to-Linked-List/"/>
-    <id>http://yoursite.com/2019/07/08/114-Flatten-Binary-Tree-to-Linked-List/</id>
-    <published>2019-07-08T12:37:31.000Z</published>
-    <updated>2019-07-08T12:39:42.938Z</updated>
+    <title>179. Largest Number</title>
+    <link href="http://yoursite.com/2019/09/25/179-Largest-Number/"/>
+    <id>http://yoursite.com/2019/09/25/179-Largest-Number/</id>
+    <published>2019-09-25T01:05:23.000Z</published>
+    <updated>2019-09-25T01:10:43.341Z</updated>
     
     <summary type="html">
     
@@ -342,7 +133,7 @@
       
         
         
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a binary tree, flatten it
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a list of non negative
         
       
     
@@ -351,16 +142,16 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="binary tree" scheme="http://yoursite.com/tags/binary-tree/"/>
+      <category term="Simulation" scheme="http://yoursite.com/tags/Simulation/"/>
     
   </entry>
   
   <entry>
-    <title>113. Path Sum II</title>
-    <link href="http://yoursite.com/2019/07/08/113-Path-Sum-II/"/>
-    <id>http://yoursite.com/2019/07/08/113-Path-Sum-II/</id>
-    <published>2019-07-08T12:35:15.000Z</published>
-    <updated>2019-07-08T12:37:02.131Z</updated>
+    <title>164. Maximum Gap</title>
+    <link href="http://yoursite.com/2019/09/22/164-Maximum-Gap/"/>
+    <id>http://yoursite.com/2019/09/22/164-Maximum-Gap/</id>
+    <published>2019-09-22T03:35:06.000Z</published>
+    <updated>2019-09-22T03:36:29.310Z</updated>
     
     <summary type="html">
     
@@ -368,7 +159,7 @@
       
         
         
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a binary tree and a sum,
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given an unsorted array, find
         
       
     
@@ -377,16 +168,224 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="binary tree" scheme="http://yoursite.com/tags/binary-tree/"/>
+      <category term="Bucket Sort" scheme="http://yoursite.com/tags/Bucket-Sort/"/>
     
   </entry>
   
   <entry>
-    <title>109. Convert Sorted List to Binary Search Tree</title>
-    <link href="http://yoursite.com/2019/07/08/109-Convert-Sorted-List-to-Binary-Search-Tree/"/>
-    <id>http://yoursite.com/2019/07/08/109-Convert-Sorted-List-to-Binary-Search-Tree/</id>
-    <published>2019-07-08T12:32:01.000Z</published>
-    <updated>2019-07-08T12:34:36.024Z</updated>
+    <title>173. Binary Search Tree Iterator</title>
+    <link href="http://yoursite.com/2019/09/22/173-Binary-Search-Tree-Iterator/"/>
+    <id>http://yoursite.com/2019/09/22/173-Binary-Search-Tree-Iterator/</id>
+    <published>2019-09-22T03:29:36.000Z</published>
+    <updated>2019-09-22T03:32:35.639Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Implement an iterator over a
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Binary Tree" scheme="http://yoursite.com/tags/Binary-Tree/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>166. Fraction to Recurring Decimal</title>
+    <link href="http://yoursite.com/2019/09/22/166-Fraction-to-Recurring-Decimal/"/>
+    <id>http://yoursite.com/2019/09/22/166-Fraction-to-Recurring-Decimal/</id>
+    <published>2019-09-22T03:26:07.000Z</published>
+    <updated>2019-09-22T03:29:07.949Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given two integers representing
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Simulation" scheme="http://yoursite.com/tags/Simulation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>165. Compare Version Numbers</title>
+    <link href="http://yoursite.com/2019/09/22/165-Compare-Version-Numbers/"/>
+    <id>http://yoursite.com/2019/09/22/165-Compare-Version-Numbers/</id>
+    <published>2019-09-22T03:22:36.000Z</published>
+    <updated>2019-09-22T03:26:16.711Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Compare two version numbers
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Simulation" scheme="http://yoursite.com/tags/Simulation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>154. Find Minimum in Rotated Sorted Array II</title>
+    <link href="http://yoursite.com/2019/09/19/154-Find-Minimum-in-Rotated-Sorted-Array-II/"/>
+    <id>http://yoursite.com/2019/09/19/154-Find-Minimum-in-Rotated-Sorted-Array-II/</id>
+    <published>2019-09-19T03:25:00.000Z</published>
+    <updated>2019-09-19T03:27:09.792Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Suppose an array sorted in
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Dichotomia" scheme="http://yoursite.com/tags/Dichotomia/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>153. Find Minimum in Rotated Sorted Array</title>
+    <link href="http://yoursite.com/2019/09/19/153-Find-Minimum-in-Rotated-Sorted-Array/"/>
+    <id>http://yoursite.com/2019/09/19/153-Find-Minimum-in-Rotated-Sorted-Array/</id>
+    <published>2019-09-19T03:22:40.000Z</published>
+    <updated>2019-09-19T03:24:31.524Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Suppose an array sorted in
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Dichotomy" scheme="http://yoursite.com/tags/Dichotomy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>149. Max Points on a Line</title>
+    <link href="http://yoursite.com/2019/09/19/149-Max-Points-on-a-Line/"/>
+    <id>http://yoursite.com/2019/09/19/149-Max-Points-on-a-Line/</id>
+    <published>2019-09-19T02:06:32.000Z</published>
+    <updated>2019-09-19T02:13:17.192Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given &lt;em&gt;n&lt;/em&gt; points on a 2D
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Graph Line" scheme="http://yoursite.com/tags/Graph-Line/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>150. Evaluate Reverse Polish Notation</title>
+    <link href="http://yoursite.com/2019/09/19/150-Evaluate-Reverse-Polish-Notation/"/>
+    <id>http://yoursite.com/2019/09/19/150-Evaluate-Reverse-Polish-Notation/</id>
+    <published>2019-09-19T02:00:37.000Z</published>
+    <updated>2019-09-19T02:05:12.251Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Evaluate the value of an
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Reverse Polish" scheme="http://yoursite.com/tags/Reverse-Polish/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>147. Insertion Sort List</title>
+    <link href="http://yoursite.com/2019/09/19/147-Insertion-Sort-List/"/>
+    <id>http://yoursite.com/2019/09/19/147-Insertion-Sort-List/</id>
+    <published>2019-09-19T01:55:28.000Z</published>
+    <updated>2019-09-19T01:59:32.106Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Sort a linked list using
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Sort" scheme="http://yoursite.com/tags/Sort/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>143. Reorder List</title>
+    <link href="http://yoursite.com/2019/09/17/143-Reorder-List/"/>
+    <id>http://yoursite.com/2019/09/17/143-Reorder-List/</id>
+    <published>2019-09-17T00:43:40.000Z</published>
+    <updated>2019-09-17T00:46:31.578Z</updated>
     
     <summary type="html">
     
@@ -403,40 +402,16 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="tree,binary tree" scheme="http://yoursite.com/tags/tree-binary-tree/"/>
+      <category term="Linkedlist" scheme="http://yoursite.com/tags/Linkedlist/"/>
     
   </entry>
   
   <entry>
-    <title>106. Construct Binary Tree from Inorder and Postorder Traversal</title>
-    <link href="http://yoursite.com/2019/07/06/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal/"/>
-    <id>http://yoursite.com/2019/07/06/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal/</id>
-    <published>2019-07-06T13:50:40.000Z</published>
-    <updated>2019-07-06T13:53:11.984Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given inorder and postorder
-        
-      
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>103. Binary Tree Zigzag Level Order Traversal</title>
-    <link href="http://yoursite.com/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/"/>
-    <id>http://yoursite.com/2019/07/06/103-Binary-Tree-Zigzag-Level-Order-Traversal/</id>
-    <published>2019-07-06T13:47:38.000Z</published>
-    <updated>2019-07-06T13:49:55.649Z</updated>
+    <title>145. Binary Tree Postorder Traversal</title>
+    <link href="http://yoursite.com/2019/09/17/145-Binary-Tree-Postorder-Traversal/"/>
+    <id>http://yoursite.com/2019/09/17/145-Binary-Tree-Postorder-Traversal/</id>
+    <published>2019-09-17T00:39:46.000Z</published>
+    <updated>2019-09-17T00:42:32.847Z</updated>
     
     <summary type="html">
     
@@ -453,14 +428,16 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
+      <category term="Tree" scheme="http://yoursite.com/tags/Tree/"/>
+    
   </entry>
   
   <entry>
-    <title>99. Recover Binary Search Tree</title>
-    <link href="http://yoursite.com/2019/07/05/99-Recover-Binary-Search-Tree/"/>
-    <id>http://yoursite.com/2019/07/05/99-Recover-Binary-Search-Tree/</id>
-    <published>2019-07-05T13:41:03.000Z</published>
-    <updated>2019-07-06T03:44:16.464Z</updated>
+    <title>144. Binary Tree Preorder Traversal</title>
+    <link href="http://yoursite.com/2019/09/17/144-Binary-Tree-Preorder-Traversal/"/>
+    <id>http://yoursite.com/2019/09/17/144-Binary-Tree-Preorder-Traversal/</id>
+    <published>2019-09-17T00:37:44.000Z</published>
+    <updated>2019-09-17T00:39:25.971Z</updated>
     
     <summary type="html">
     
@@ -468,7 +445,7 @@
       
         
         
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Two elements of a binary search
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a binary tree, return the
         
       
     
@@ -477,16 +454,16 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="Morris Threading Traversal" scheme="http://yoursite.com/tags/Morris-Threading-Traversal/"/>
+      <category term="Tree" scheme="http://yoursite.com/tags/Tree/"/>
     
   </entry>
   
   <entry>
-    <title>97. Interleaving String</title>
-    <link href="http://yoursite.com/2019/07/05/97-Interleaving-String/"/>
-    <id>http://yoursite.com/2019/07/05/97-Interleaving-String/</id>
-    <published>2019-07-05T03:59:56.000Z</published>
-    <updated>2019-07-05T06:02:07.741Z</updated>
+    <title>140. Word Break II</title>
+    <link href="http://yoursite.com/2019/09/16/140-Word-Break-II/"/>
+    <id>http://yoursite.com/2019/09/16/140-Word-Break-II/</id>
+    <published>2019-09-16T06:53:40.000Z</published>
+    <updated>2019-09-17T00:36:34.119Z</updated>
     
     <summary type="html">
     
@@ -494,7 +471,7 @@
       
         
         
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given &lt;em&gt;s1&lt;/em&gt;, &lt;em&gt;s2&lt;/em&gt;,
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a
         
       
     
@@ -503,16 +480,16 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="memorized search" scheme="http://yoursite.com/tags/memorized-search/"/>
+      <category term="Memorized Search" scheme="http://yoursite.com/tags/Memorized-Search/"/>
     
   </entry>
   
   <entry>
-    <title>95. Unique Binary Search Trees II</title>
-    <link href="http://yoursite.com/2019/07/01/95-Unique-Binary-Search-Trees-II/"/>
-    <id>http://yoursite.com/2019/07/01/95-Unique-Binary-Search-Trees-II/</id>
-    <published>2019-07-01T14:09:38.000Z</published>
-    <updated>2019-07-01T14:16:23.668Z</updated>
+    <title>139. Word Break</title>
+    <link href="http://yoursite.com/2019/09/15/139-Word-Break/"/>
+    <id>http://yoursite.com/2019/09/15/139-Word-Break/</id>
+    <published>2019-09-15T12:05:56.000Z</published>
+    <updated>2019-09-16T06:53:09.302Z</updated>
     
     <summary type="html">
     
@@ -520,7 +497,7 @@
       
         
         
-          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given an integer &lt;em&gt;n&lt;/em&gt;,
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;Given a
         
       
     
@@ -529,7 +506,33 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="recursive" scheme="http://yoursite.com/tags/recursive/"/>
+      <category term="DP" scheme="http://yoursite.com/tags/DP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>138. Copy List with Random Pointer</title>
+    <link href="http://yoursite.com/2019/09/15/138-Copy-List-with-Random-Pointer/"/>
+    <id>http://yoursite.com/2019/09/15/138-Copy-List-with-Random-Pointer/</id>
+    <published>2019-09-15T12:03:06.000Z</published>
+    <updated>2019-09-15T12:05:00.225Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description:&quot;&gt;&lt;/a&gt;Description:&lt;/h2&gt;&lt;p&gt;A linked list is given such
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="Simulation" scheme="http://yoursite.com/tags/Simulation/"/>
     
   </entry>
   
